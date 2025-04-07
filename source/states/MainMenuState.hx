@@ -309,7 +309,25 @@ class MainMenuState extends MusicBeatState
 						#end
 
 						case 'credits':
-							MusicBeatState.switchState(new CreditsState());
+							var creditsimage:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('credits'));
+							add(creditsimage);
+							var moveSpeed:Float = 10000000.0;
+							if (FlxG.keys.pressed.A)
+								{
+									creditsimage.x -= moveSpeed;
+								}
+							if (FlxG.keys.pressed.D)
+								{
+									creditsimage.x += moveSpeed;
+								}
+							if (FlxG.keys.pressed.W)
+								{
+									creditsimage.y -= moveSpeed;
+								}
+							if (FlxG.keys.pressed.S)
+								{
+									creditsimage.y += moveSpeed;
+								}
 						case 'options':
 							MusicBeatState.switchState(new OptionsState());
 							OptionsState.onPlayState = false;
