@@ -37,7 +37,10 @@ class MainMenuState extends MusicBeatState
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 
-	static var showOutdatedWarning:Bool = true;
+	static var showOutdatedWarning:Bool = false;
+
+	var creditsimage:FlxSprite;
+	var credited:Bool = false;
 	override function create()
 	{
 		super.create();
@@ -309,25 +312,14 @@ class MainMenuState extends MusicBeatState
 						#end
 
 						case 'credits':
-							var creditsimage:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('credits'));
+							creditsimage = new FlxSprite(-80).loadGraphic(Paths.image('credits'));
+							creditsimage.screenCenter();
+							creditsimage.x -= 600;
+							creditsimage.y += 275;
+							creditsimage.scale.set(0.8, 0.8);
+							FlxTween.tween(creditsimage.scale, {x: 0.9, y: 0.9}, 0.4, {ease: FlxEase.bounceOut});
 							add(creditsimage);
-							var moveSpeed:Float = 10000000.0;
-							if (FlxG.keys.pressed.A)
-								{
-									creditsimage.x -= moveSpeed;
-								}
-							if (FlxG.keys.pressed.D)
-								{
-									creditsimage.x += moveSpeed;
-								}
-							if (FlxG.keys.pressed.W)
-								{
-									creditsimage.y -= moveSpeed;
-								}
-							if (FlxG.keys.pressed.S)
-								{
-									creditsimage.y += moveSpeed;
-								}
+							credited = true;
 						case 'options':
 							MusicBeatState.switchState(new OptionsState());
 							OptionsState.onPlayState = false;
@@ -364,6 +356,34 @@ class MainMenuState extends MusicBeatState
 				MusicBeatState.switchState(new MasterEditorMenu());
 			}
 			#end
+		}
+		if (credited) {
+			var moveSpeed:Float = 4.0;
+			var xvelocity:Float = 0;
+			var yvelocity:Float = 0;
+
+			xvelocity = xvelocity * 0.95;
+			yvelocity = yvelocity * 0.95;
+
+			if (FlxG.keys.pressed.A)
+				{
+					xvelocity = -2.5;
+				}
+			if (FlxG.keys.pressed.D)
+				{
+					xvelocity = 2.5;
+				}
+			if (FlxG.keys.pressed.W)
+				{
+					yvelocity = -2.5;
+				}
+			if (FlxG.keys.pressed.S)
+				{
+					yvelocity = 2.5;
+				}
+
+			creditsimage.x += xvelocity * moveSpeed;
+			creditsimage.y += yvelocity * moveSpeed;
 		}
 
 		super.update(elapsed);
