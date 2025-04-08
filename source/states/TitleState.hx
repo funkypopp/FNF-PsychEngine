@@ -133,6 +133,7 @@ class TitleState extends MusicBeatState
 
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logoBl.animation.play('bump');
+		logoBl.screenCenter();
 		logoBl.updateHitbox();
 
 		gfDance = new FlxSprite(gfPosition.x, gfPosition.y);
@@ -197,7 +198,6 @@ class TitleState extends MusicBeatState
 		ngSpr.screenCenter(X);
 		ngSpr.antialiasing = ClientPrefs.data.antialiasing;
 
-		add(gfDance);
 		add(logoBl); //FNF Logo
 		add(titleText); //"Press Enter to Begin" text
 		add(credGroup);
@@ -527,10 +527,9 @@ class TitleState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
-					createCoolText(['Psych Engine by'], 40);
+					createCoolText(['Mod by'], 40);
 				case 4:
-					addMoreText('Shadow Mario', 40);
-					addMoreText('Riveren', 40);
+					addMoreText('Birthday Mod Inc.', 40);
 				case 5:
 					deleteCoolText();
 				case 6:
@@ -548,13 +547,33 @@ class TitleState extends MusicBeatState
 				case 13:
 					deleteCoolText();
 				case 14:
-					addMoreText('Friday');
-				case 15:
-					addMoreText('Night');
+					curWacky = FlxG.random.getObject(getIntroTextShit());
+					createCoolText([curWacky[0]]);
 				case 16:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
-
+					addMoreText(curWacky[1]);
 				case 17:
+					deleteCoolText();
+				case 18:
+					curWacky = FlxG.random.getObject(getIntroTextShit());
+					createCoolText([curWacky[0]]);
+				case 20:
+					addMoreText(curWacky[1]);
+				case 21:
+					deleteCoolText();
+				case 22:
+					createCoolText(['funkypop says']);
+				case 24:
+					addMoreText('@rareblin WORLLLLLLKKKKK');
+				case 25:
+					deleteCoolText();
+				case 26:
+					addMoreText('Jerk Circle');
+				case 27:
+					addMoreText('With The');
+				case 28:
+					addMoreText('Gang'); // credTextShit.text += '\nFunkin';
+
+				case 29:
 					skipIntro();
 			}
 		}

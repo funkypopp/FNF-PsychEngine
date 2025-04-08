@@ -1,20 +1,21 @@
 {
 	"directory": "week2",
-	"defaultZoom": 1.05,
+	"defaultZoom": 0.8,
 	"stageUI": "",
 
-	"boyfriend": [770, 100],
-	"girlfriend": [400, 130],
-	"opponent": [100, 100],
+	"boyfriend": [900, 100],
+	"girlfriend": [600, 130],
+	"opponent": [-100, 100],
 	"hide_girlfriend": true,
 
-	"camera_boyfriend": [0, 0],
-	"camera_opponent": [0, 0],
-	"camera_girlfriend": [0, 0],
+	"camera_boyfriend": [-250, -50],
+	"camera_opponent": [250, -50],
+	"camera_girlfriend": [750, 200],
 	"camera_speed": 1,
 
 	"preload": {
 		"images/reno": 1,
+		"images/gummy": 1
 	},
 
 	"_editorMeta": {
