@@ -16,6 +16,7 @@ class AchievementsMenuState extends MusicBeatState
 
 	var soundNames:Array<String> = ["sans1", "sans2", "sans3", "sans4"];
 	
+
 	var soundA:FlxSound = null;
 	var soundD:FlxSound = null;
 	var soundW:FlxSound = null;
@@ -63,6 +64,16 @@ class AchievementsMenuState extends MusicBeatState
 
 					hasDied = true;
 					sans.kill(); 
+
+					FlxG.camera.fade(FlxColor.BLACK, 2, false, function()
+					{
+						var deathImage:FlxSprite = new FlxSprite(FlxG.width / 2 - 150, FlxG.height / 2 - 150); 
+						deathImage.loadGraphic(Paths.image('sans')); 
+						deathImage.alpha = 0; 
+						add(deathImage);
+			
+						FlxTween.tween(deathImage, {alpha: 1}, 3);
+					});
 				}
 			}
 
@@ -70,7 +81,7 @@ class AchievementsMenuState extends MusicBeatState
 
 		var moveSpeed = 200;
 
-		if (FlxG.keys.pressed.A) and (hasDied = false) {
+		if (FlxG.keys.pressed.A) {
 			sans.velocity.x = -moveSpeed;
 			sans.flipX = true;
 		} else if (FlxG.keys.pressed.D) {
