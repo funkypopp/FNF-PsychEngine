@@ -1,0 +1,32 @@
+{
+	"songs": [
+		[
+			"my-first-song",
+			"pearleon",
+			[
+				106,
+				160,
+				59
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "buck",
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"storyName": "pearleon",
+	"weekName": "pearleon",
+	"freeplayColor": [
+		106,
+		160,
+		59
+	],
+	"hideStoryMode": true,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

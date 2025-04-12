@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-43,
+				0
+			],
+			"fps": 2,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "pearleon"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-20
+			],
+			"fps": 2,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "pearleon"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				20
+			],
+			"fps": 2,
+			"anim": "singUP",
+			"indices": [],
+			"name": "pearleon"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				0
+			],
+			"fps": 2,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "pearleon"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 2,
+			"anim": "idle",
+			"indices": [],
+			"name": "pearleon"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/pearleon",
+	"position": [
+		0,
+		390
+	],
+	"healthicon": "pearleon",
+	"flip_x": false,
+	"healthbar_colors": [
+		106,
+		160,
+		59
+	],
+	"camera_position": [
+		-10,
+		20
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="pearleon.png" width="366" height="346">
+  <!-- Created with poopy butt haha got you lololol -->
+  <SubTexture name="pearleon0000" x="0" y="0"  width="366" height="346"/>
+</TextureAtlas>
