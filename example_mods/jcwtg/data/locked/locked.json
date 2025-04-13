@@ -1,7 +1,32 @@
 {
 	"player1": "bf",
-	"player2": "dad",
-	"events": [],
+	"player2": "grimlock",
+	"events": [
+		[
+			2019.23076923077,
+			[
+				["Set Property", "boyfriendGroup.visible", "true"]
+			]
+		],
+		[
+			2956.73076923077,
+			[
+				["Set Property", "dadGroup.visible", "true"]
+			]
+		],
+		[
+			9230.76923076923,
+			[
+				["Camera Follow Pos", "", ""]
+			]
+		],
+		[
+			82500,
+			[
+				["Change Character", "Dad", "grimlockHigh"]
+			]
+		]
+	],
 	"notes": [
 		{
 			"sectionBeats": 4,

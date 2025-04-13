@@ -99,10 +99,38 @@ function onUpdate()
 	end
 end
 
+function onStepHit()
+	if songName == 'locked' then
+		if curStep == 290 then
+			camon = true
+			camlock = false
+		end
+	end
+end
+
 function onBeatHit()
-	if songName == 'Boulevard' then
-		if curBeat == 303 then
+	if songName == 'locked' then
+		if curBeat >= 0  and curBeat <= 15 then
 			camon = false
+			camlock = true
+		end
+		if curBeat == 15 then
+			camon = true
+			camlock = false
+		end
+		if curBeat == 47 then
+			camon = false
+			camlock = true
+		end
+		if curBeat == 63 then
+			camlock = false
+		end
+		if curBeat == 64 then
+			camlock = true
+		end
+		if curBeat == 76 then
+			camon = false
+			camlock = true
 		end
 	end
 end

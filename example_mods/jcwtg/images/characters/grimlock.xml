@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="grimlockbdaystuff.png">
+	<!-- Created with Adobe Animate version 24.0.8.70 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="GrimlockDown0000" x="1" y="1" width="400" height="540" frameX="-18" frameY="-26" frameWidth="418" frameHeight="575"/>
+	<SubTexture name="GrimlockDown0001" x="1" y="1" width="400" height="540" frameX="-18" frameY="-26" frameWidth="418" frameHeight="575"/>
+	<SubTexture name="GrimlockDown0002" x="401" y="1" width="394" height="575" frameX="0" frameY="0" frameWidth="418" frameHeight="575"/>
+	<SubTexture name="GrimlockDown0003" x="401" y="1" width="394" height="575" frameX="0" frameY="0" frameWidth="418" frameHeight="575"/>
+	<SubTexture name="GrimlockDown0004" x="401" y="1" width="394" height="575" frameX="0" frameY="0" frameWidth="418" frameHeight="575"/>
+	<SubTexture name="GrimlockDown0005" x="401" y="1" width="394" height="575" frameX="0" frameY="0" frameWidth="418" frameHeight="575"/>
+	<SubTexture name="GrimlockDown0006" x="401" y="1" width="394" height="575" frameX="0" frameY="0" frameWidth="418" frameHeight="575"/>
+	<SubTexture name="GrimlockDown0007" x="401" y="1" width="394" height="575" frameX="0" frameY="0" frameWidth="418" frameHeight="575"/>
+	<SubTexture name="GrimlockDown0008" x="401" y="1" width="394" height="575" frameX="0" frameY="0" frameWidth="418" frameHeight="575"/>
+	<SubTexture name="GrimlockDown0009" x="401" y="1" width="394" height="575" frameX="0" frameY="0" frameWidth="418" frameHeight="575"/>
+	<SubTexture name="GrimlockDown0010" x="401" y="1" width="394" height="575" frameX="0" frameY="0" frameWidth="418" frameHeight="575"/>
+	<SubTexture name="GrimlockIdle0000" x="795" y="1" width="393" height="596" frameX="-7" frameY="-12" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0001" x="795" y="1" width="393" height="596" frameX="-7" frameY="-12" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0002" x="1188" y="1" width="392" height="597" frameX="-5" frameY="-11" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0003" x="1188" y="1" width="392" height="597" frameX="-5" frameY="-11" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0004" x="1580" y="1" width="387" height="606" frameX="-1" frameY="-2" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0005" x="1580" y="1" width="387" height="606" frameX="-1" frameY="-2" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0006" x="1" y="607" width="386" height="608" frameX="0" frameY="0" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0007" x="1" y="607" width="386" height="608" frameX="0" frameY="0" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0008" x="387" y="607" width="386" height="608" frameX="0" frameY="0" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0009" x="387" y="607" width="386" height="608" frameX="0" frameY="0" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0010" x="387" y="607" width="386" height="608" frameX="0" frameY="0" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0011" x="387" y="607" width="386" height="608" frameX="0" frameY="0" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0012" x="387" y="607" width="386" height="608" frameX="0" frameY="0" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockIdle0013" x="387" y="607" width="386" height="608" frameX="0" frameY="0" frameWidth="400" frameHeight="608"/>
+	<SubTexture name="GrimlockLeft0000" x="773" y="607" width="480" height="606" frameX="0" frameY="-8" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0001" x="773" y="607" width="480" height="606" frameX="0" frameY="-8" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0002" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0003" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0004" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0005" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0006" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0007" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0008" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0009" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0010" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0011" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0012" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0013" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockLeft0014" x="1253" y="607" width="471" height="614" frameX="-6" frameY="0" frameWidth="480" frameHeight="614"/>
+	<SubTexture name="GrimlockRight0000" x="1" y="1221" width="438" height="557" frameX="0" frameY="-12" frameWidth="438" frameHeight="569"/>
+	<SubTexture name="GrimlockRight0001" x="1" y="1221" width="438" height="557" frameX="0" frameY="-12" frameWidth="438" frameHeight="569"/>
+	<SubTexture name="GrimlockRight0002" x="439" y="1221" width="423" height="568" frameX="0" frameY="0" frameWidth="438" frameHeight="569"/>
+	<SubTexture name="GrimlockRight0003" x="439" y="1221" width="423" height="568" frameX="0" frameY="0" frameWidth="438" frameHeight="569"/>
+	<SubTexture name="GrimlockRight0004" x="439" y="1221" width="423" height="568" frameX="0" frameY="0" frameWidth="438" frameHeight="569"/>
+	<SubTexture name="GrimlockRight0005" x="439" y="1221" width="423" height="568" frameX="0" frameY="0" frameWidth="438" frameHeight="569"/>
+	<SubTexture name="GrimlockRight0006" x="439" y="1221" width="423" height="568" frameX="0" frameY="0" frameWidth="438" frameHeight="569"/>
+	<SubTexture name="GrimlockRight0007" x="439" y="1221" width="423" height="568" frameX="0" frameY="0" frameWidth="438" frameHeight="569"/>
+	<SubTexture name="GrimlockRight0008" x="439" y="1221" width="423" height="568" frameX="0" frameY="0" frameWidth="438" frameHeight="569"/>
+	<SubTexture name="GrimlockRight0009" x="439" y="1221" width="423" height="568" frameX="0" frameY="0" frameWidth="438" frameHeight="569"/>
+	<SubTexture name="GrimlockRight0010" x="439" y="1221" width="423" height="568" frameX="0" frameY="0" frameWidth="438" frameHeight="569"/>
+	<SubTexture name="GrimlockUp0000" x="862" y="1221" width="378" height="661"/>
+	<SubTexture name="GrimlockUp0001" x="862" y="1221" width="378" height="661"/>
+	<SubTexture name="GrimlockUp0002" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+	<SubTexture name="GrimlockUp0003" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+	<SubTexture name="GrimlockUp0004" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+	<SubTexture name="GrimlockUp0005" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+	<SubTexture name="GrimlockUp0006" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+	<SubTexture name="GrimlockUp0007" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+	<SubTexture name="GrimlockUp0008" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+	<SubTexture name="GrimlockUp0009" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+	<SubTexture name="GrimlockUp0010" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+	<SubTexture name="GrimlockUp0011" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+	<SubTexture name="GrimlockUp0012" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+	<SubTexture name="GrimlockUp0013" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+	<SubTexture name="GrimlockUp0014" x="1240" y="1221" width="378" height="656" frameX="0" frameY="-5" frameWidth="378" frameHeight="661"/>
+</TextureAtlas>
