@@ -1,5 +1,34 @@
+
 var midX = FlxG.width / 2;
 var midY = (FlxG.height / 2) + 200;
+var black:FlxSprite;
+var funnyText:FlxText;
+var pants:FlxText;
+var shittyFuckingTimer:FlxTimer;
+function onCreatePost() {
+    black = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, 0xff000000);
+    black.scrollFactor.set(0, 0);
+    black.scale.set(1.2, 1.2);
+    black.cameras = [camGame];
+    black.screenCenter();
+    black.visible = false;
+    add(black);
+
+    funnyText = new FlxText(0, 0, 0, "CAN'T").setFormat("tnr.ttf", 75, 0xffffffff, "left", 0xff000000);
+    funnyText.cameras = [camGame];
+    funnyText.screenCenter();
+    funnyText.x -= 350;
+    funnyText.y += 250;
+    funnyText.visible = false;
+    add(funnyText);
+
+    pants = new FlxText(0, 0, 0, "PANTS").setFormat("tnr.ttf", 75, 0xffffffff, "center", 0xff000000);
+    pants.cameras = [camGame];
+    pants.screenCenter();
+    pants.y += 250;
+    pants.visible = false;
+    add(pants);
+}
 
 // to make my life easier
 function centerCamera(?poop:Float) {
@@ -63,6 +92,15 @@ function onBeatHit() {
             centerCamera(-40);
         }});
     }
+    if (curBeat == 128) {
+        FlxTween.tween(game, {defaultCamZoom: 0.5}, 4.65, {ease: FlxEase.sineInOut});
+        FlxTween.tween(camGame.scroll, {y: camGame.scroll.y - 200}, 4.65, {ease: FlxEase.sineInOut, onComplete: function() {
+            centerCamera();
+        }});
+    }
+    if (curBeat == 163) {
+        FlxTween.tween(game, {defaultCamZoom: 0.75}, 0.5, {ease: FlxEase.backInOut});
+    }
 }
 
 function onStepHit() {
@@ -112,5 +150,82 @@ function onStepHit() {
         focusOnBf();
         FlxTween.tween(camGame, {zoom: 0.8}, 0.000001, {ease: FlxEase.cubeIn});
         game.defaultCamZoom = 0.8;
+    }
+    if (curStep == 508) {
+        black.visible = true;
+        funnyText.visible = true;
+        shittyFuckingTimer = new FlxTimer().start(0.12, () -> {
+            funnyText.text = "CAN'T KEEP";
+            new FlxTimer().start(0.12, () -> {
+                funnyText.text = "CAN'T KEEP MY";
+                new FlxTimer().start(0.12, () -> {
+                    funnyText.text = "CAN'T KEEP MY DICK";
+                    new FlxTimer().start(0.08, () -> {
+                        funnyText.text = "CAN'T KEEP MY DICK IN";
+                        new FlxTimer().start(0.08, () -> {
+                            funnyText.text = "CAN'T KEEP MY DICK IN MY";
+                        });
+                    });
+                });
+            });
+        });
+    }
+    if (curStep == 512) {
+        funnyText.visible = false;
+        pants.visible = true;
+        FlxTween.tween(black, {alpha: 0}, 0.4, {ease: FlxEase.cubeOut, onComplete: function() {
+            black.destroy();
+        }});
+        FlxTween.tween(pants, {alpha: 0}, 0.6, {ease: FlxEase. cubeOut, onComplete: function() {
+            pants.destroy();
+        }});
+    }
+    if (curStep == 566) {
+        focusOnDad();
+    }
+    if (curStep == 567) {
+        focusOnBf();
+    }
+    if (curStep == 568) {
+        focusOnDad();
+    }
+    if (curStep == 569) {
+        focusOnBf();
+    }
+    if (curStep == 570) {
+        centerCamera(100);
+        FlxTween.tween(game, {defaultCamZoom: 0.5}, 0.45, {ease: FlxEase.backOut, onComplete: function() {
+            FlxTween.tween(game, {defaultCamZoom: 0.75}, 0.25, {ease: FlxEase.quintIn});
+        }});
+        FlxTween.tween(camGame.scroll, {y: camGame.scroll.y - 100}, 0.65, {ease: FlxEase.backOut});
+        FlxTween.tween(boyfriendGroup, {x: boyfriendGroup.x + 250}, 0.45, {ease: FlxEase.backOut, onComplete: function() {
+            FlxTween.tween(boyfriendGroup, {x: boyfriendGroup.x - 200}, 0.3, {ease: FlxEase.quintIn});
+        }});
+        FlxTween.tween(dadGroup, {x: dadGroup.x - 250}, 0.45, {ease: FlxEase.backOut, onComplete: function() {
+            FlxTween.tween(dadGroup, {x: dadGroup.x + 200}, 0.3, {ease: FlxEase.quintIn});
+        }});
+    }
+}
+
+function onEvent(ev,v1,v2) {
+    if (ev == 'Set Property' && v1 == 'camGame.zoom') {
+        game.defaultCamZoom = v2;
+    }
+    if (ev == '') {
+        switch(v1) {
+            case 'bf':
+                focusOnBf();
+            case 'dad':
+                focusOnDad();
+            case 'center':
+                if (v2 != null) {
+                    centerCamera(v2);
+                }
+                else {
+                    centerCamera();
+                }
+            case 'reset':
+                triggerEvent('Camera Follow Pos', '', '');
+        }
     }
 }

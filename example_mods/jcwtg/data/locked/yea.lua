@@ -17,6 +17,12 @@ function onBeatHit()
     if curBeat == 98 then
         setProperty('cameraSpeed', 1)
     end
+    if curBeat == 168 then
+        setProperty('cameraSpeed', 9999999.9)
+    end
+    if curBeat == 175 then
+        setProperty('cameraSpeed', 1)
+    end
 end
 
 function onStepHit()
@@ -30,6 +36,12 @@ function onStepHit()
         setProperty('cameraSpeed', 9999999.9)
     end
     if curStep == 449 then
+        setProperty('cameraSpeed', 1)
+    end
+    if curStep == 566 then 
+        setProperty('cameraSpeed', 9999999.9)
+    end
+    if curStep == 571 then
         setProperty('cameraSpeed', 1)
     end
 end

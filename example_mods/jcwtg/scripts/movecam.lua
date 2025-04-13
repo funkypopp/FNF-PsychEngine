@@ -105,6 +105,10 @@ function onStepHit()
 			camon = true
 			camlock = false
 		end
+		if curStep == 831 then
+			camon = false
+			camlock = true
+		end
 	end
 end
 
@@ -131,6 +135,14 @@ function onBeatHit()
 		if curBeat == 76 then
 			camon = false
 			camlock = true
+		end
+		if curBeat == 175 then
+			camon = true
+			camlock = false
+		end 
+		if curBeat == 212 then
+			camon = true
+			camlock = false
 		end
 	end
 end
