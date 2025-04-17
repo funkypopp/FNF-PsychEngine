@@ -21,7 +21,8 @@ function onCreate() {
 }
 
 function onBeatHit() {
-    if (curBeat == 216) {
+    if (curBeat == 216) 
+    {
         aero.alpha = 1
     }
 }
