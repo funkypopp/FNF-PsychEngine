@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sansunlock.png">
+	<!-- Created with Adobe Animate version 24.0.8.70 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="unlock0000" x="1" y="1" width="745" height="241"/>
+	<SubTexture name="unlock0001" x="1" y="1" width="745" height="241"/>
+	<SubTexture name="unlock0002" x="1" y="279" width="745" height="241"/>
+	<SubTexture name="unlock0003" x="1" y="279" width="745" height="241"/>
+	<SubTexture name="unlock0004" x="1" y="557" width="745" height="241"/>
+	<SubTexture name="unlock0005" x="1" y="557" width="745" height="241"/>
+</TextureAtlas>

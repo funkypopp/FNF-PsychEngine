@@ -9,6 +9,7 @@ class MusicBeatState extends FlxState
 	private var stepsToDo:Int = 0;
 
 	private var curStep:Int = 0;
+	private var oldStep:Int = 0;
 	private var curBeat:Int = 0;
 
 	private var curDecStep:Float = 0;
@@ -54,7 +55,7 @@ class MusicBeatState extends FlxState
 	override function update(elapsed:Float)
 	{
 		//everyStep();
-		var oldStep:Int = curStep;
+		oldStep = curStep;
 		timePassedOnState += elapsed;
 
 		updateCurStep();
