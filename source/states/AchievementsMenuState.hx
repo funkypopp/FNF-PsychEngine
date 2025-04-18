@@ -13,7 +13,7 @@ import objects.Ourp;
 #if ACHIEVEMENTS_ALLOWED
 class AchievementsMenuState extends MusicBeatState
 {
-	var sans:FlxSprite;
+	public static var sans:FlxSprite;
 	
 	var floor:FlxSprite;
 	var bg:FlxSprite;
@@ -30,7 +30,10 @@ class AchievementsMenuState extends MusicBeatState
 	var deathSound:FlxSound;
 	var hasDied:Bool = false;
 
+	var enemyGroup:FlxTypedGroup<Ourp> = new FlxTypedGroup<Ourp>();
 	var enemy:Ourp;
+
+	var spawned:Bool = false;
 
 	public static var score:Int = 0;
 	public static var wave:Int = 0;
@@ -67,6 +70,8 @@ class AchievementsMenuState extends MusicBeatState
 
 		deathSound = new FlxSound();
 		deathSound.loadEmbedded(Paths.sound('dead'), false);
+
+		add(enemyGroup);
 	}
 
 	function onTouchFloor(obj1:FlxObject, obj2:FlxObject):Void
@@ -95,11 +100,20 @@ class AchievementsMenuState extends MusicBeatState
 
 	function spawnOurp():Void {
 		enemy = new Ourp(rand);
-		add(enemy);
+		enemyGroup.add(enemy);
+		trace('spawned');
+
+		if (!spawned) {
+			spawned = true;
+		}
+		else {
+			spawned = false;
+			spawned = true;
+		}
 	}
 
 	function doSpawnLoop():Void {
-		new FlxTimer().start(25, function(t:FlxTimer) {
+		new FlxTimer().start(10, function(t:FlxTimer) {
 			spawnOurp();
 			doSpawnLoop();
 		});
@@ -127,7 +141,6 @@ class AchievementsMenuState extends MusicBeatState
 
 		FlxG.collide(sans, floor, onTouchFloor);
 
-
 		if (!hasDied) {
 			if (FlxG.keys.justPressed.A) {
 				var s = FlxG.random.getObject(soundNames);
@@ -135,6 +148,7 @@ class AchievementsMenuState extends MusicBeatState
 				soundA.loadEmbedded(Paths.sound(s), true);
 				soundA.play();
 				FlxG.sound.list.add(soundA);
+				soundA.volume = 0.5;
 			} else if (FlxG.keys.justReleased.A && soundA != null) {
 				soundA.stop();
 				soundA = null;
@@ -146,6 +160,7 @@ class AchievementsMenuState extends MusicBeatState
 				soundD.loadEmbedded(Paths.sound(s), true);
 				soundD.play();
 				FlxG.sound.list.add(soundD);
+				soundD.volume = 0.5;
 			} else if (FlxG.keys.justReleased.D && soundD != null) {
 				soundD.stop();
 				soundD = null;
@@ -156,6 +171,7 @@ class AchievementsMenuState extends MusicBeatState
 				soundW = new FlxSound();
 				soundW.loadEmbedded(Paths.sound(s), true);
 				soundW.play();
+				soundW.volume = 0.5;
 				FlxG.sound.list.add(soundW);
 			} else if (FlxG.keys.justReleased.W && soundW != null) {
 				soundW.stop();
