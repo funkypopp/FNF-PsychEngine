@@ -1,5 +1,21 @@
 {
+	"storyName": "we fuckin the people in this house",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": false,
 	"songs": [
+		[
+			"brb",
+			"face",
+			[
+				146,
+				113,
+				253
+			]
+		],
 		[
 			"locked",
 			"face",
@@ -10,18 +26,11 @@
 			]
 		]
 	],
-	"hiddenUntilUnlocked": false,
-	"hideFreeplay": false,
-	"weekBackground": "stage",
-	"difficulties": "",
 	"weekCharacters": [
 		"bf",
 		"bf",
 		"gf"
 	],
-	"storyName": "we fuckin the people in this house",
-	"weekName": "my mod",
-	"hideStoryMode": false,
-	"weekBefore": "tutorial",
-	"startUnlocked": true
+	"hiddenUntilUnlocked": false,
+	"weekName": "my mod"
 }

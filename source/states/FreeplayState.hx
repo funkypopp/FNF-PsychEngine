@@ -127,7 +127,7 @@ class FreeplayState extends MusicBeatState
 			
 			// too laggy with a lot of songs, so i had to recode the logic for it
 			songText.visible = songText.active = songText.isMenuItem = false;
-			icon.visible = icon.active = false;
+			icon.visible = false;
 
 			// using a FlxGroup is too much fuss!
 			iconArray.push(icon);
@@ -592,7 +592,7 @@ class FreeplayState extends MusicBeatState
 			item.y = ((item.targetY - lerpSelected) * 1.3 * item.distancePerItem.y) + item.startPosition.y;
 
 			var icon:HealthIcon = iconArray[i];
-			icon.visible = icon.active = true;
+			icon.visible = false;
 			_lastVisibles.push(i);
 		}
 	}
