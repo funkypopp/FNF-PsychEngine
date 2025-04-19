@@ -9,6 +9,7 @@ class Bullet extends FlxSprite {
         loadGraphic(Paths.image('untunedsansstuff/bullet'));
         scale.x = 0.5;
         scale.y = 0.5;
+        updateHitbox();
 
     }
 }

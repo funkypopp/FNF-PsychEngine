@@ -1,5 +1,7 @@
 package states;
 
+import flixel.math.FlxAngle;
+import flixel.input.keyboard.FlxKey;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
@@ -14,38 +16,48 @@ import objects.Bullet;
 #if ACHIEVEMENTS_ALLOWED
 class AchievementsMenuState extends MusicBeatState
 {
-	public static var sans:FlxSprite;
-	
+	public static var score:Int = 0;
+	public static var wave:Int = 0;
+
+	public static final BULLET_SPEED:Int = 400;
+
+	public var sans:FlxSprite;
+
 	var floor:FlxSprite;
 	var bg:FlxSprite;
 	var black:FlxSprite;
 
-	var rand:Int;
+	/**
+	 * value that decides which ourple will spawn next.
+	 */
+	var enemyIndex(default, set):Int = 1;
 
-	var soundNames:Array<String> = ["sans1", "sans2", "sans3", "sans4"];
-	
-	var soundA:FlxSound = null;
-	var soundD:FlxSound = null;
-	var soundW:FlxSound = null;
+	function set_enemyIndex(value:Int):Int
+	{
+		return (enemyIndex = Math.round(FlxMath.bound(value, 1, 7)));
+	}
+
+	final soundNames:Array<String> = ["sans1", "sans2", "sans3", "sans4"];
+
+	var soundA:FlxSound = FlxG.sound.load(Paths.sound("sans1"));
+	var soundD:FlxSound = FlxG.sound.load(Paths.sound("sans1"));
+	var soundW:FlxSound = FlxG.sound.load(Paths.sound("sans1"));
 
 	var deathSound:FlxSound;
 	var hasDied:Bool = false;
 
-	var enemyGroup:FlxTypedGroup<Ourp> = new FlxTypedGroup<Ourp>();
-	var enemy:Ourp;
-
-	var bulletGroup:FlxTypedGroup<Bullet> = new FlxTypedGroup<Bullet>();
-	public static var bullet:Bullet;
-	var shot:Bool = false;
+	final bulletGroup:FlxTypedGroup<Bullet> = new FlxTypedGroup<Bullet>();
+	final enemyGroup:FlxTypedGroup<Ourp> = new FlxTypedGroup<Ourp>();
 
 	var imCheckingSmthRq:Float;
 	var againLol:Float;
 
-	public static var score:Int = 0;
-	public static var wave:Int = 0;
-
 	override public function create()
 	{
+		// precache sounds
+		for (i in soundNames)
+			Paths.sound(i);
+
 		super.create();
 
 		FlxG.mouse.visible = true;
@@ -54,9 +66,6 @@ class AchievementsMenuState extends MusicBeatState
 		againLol = FlxG.height / 2;
 
 		trace('xCenter: ' + imCheckingSmthRq + ',yCenter: ' + againLol);
-
-		if(FlxG.sound.music != null)
-			FlxG.sound.music.stop();
 
 		FlxG.sound.playMusic(Paths.music('sans 1'), 1);
 
@@ -69,7 +78,7 @@ class AchievementsMenuState extends MusicBeatState
 		sans = new FlxSprite(100, 100, Paths.image('sans'));
 		sans.setGraphicSize(32, 32);
 		sans.updateHitbox();
-		sans.acceleration.y = 800; 
+		sans.acceleration.y = 800;
 		sans.maxVelocity.set(200, 400);
 		sans.drag.x = 800;
 		add(sans);
@@ -81,141 +90,164 @@ class AchievementsMenuState extends MusicBeatState
 
 		doSpawnLoop();
 
-		deathSound = new FlxSound();
-		deathSound.loadEmbedded(Paths.sound('dead'), false);
+		deathSound = new FlxSound().loadEmbedded(Paths.sound('dead'), false);
 
 		add(enemyGroup);
+		add(bulletGroup);
 	}
 
+	/**
+	 * Collided with the floor. trigges result screen.
+	 */
 	function onTouchFloor(obj1:FlxObject, obj2:FlxObject):Void
-	{	//funky i fixed your goddamm sound ok
-		if (!hasDied){ //shyge fix sound okay thanks
+	{ // funky i fixed your goddamm sound ok
 
-			if(FlxG.sound.music != null)
-				FlxG.sound.music.stop();
+		hasDied = true;
 
-			deathSound.play(); 
-			
-			hasDied = true;
-			sans.y += 1000;
-			sans.kill();
+		if (FlxG.sound.music != null)
+			FlxG.sound.music.stop();
 
-			black = new FlxSprite(0, 0).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
-			black.alpha = 0;
-			add(black);
+		deathSound.play();
 
-			FlxTween.tween(black, {alpha: 1}, 2, {ease: FlxEase.sineInOut});
-			new FlxTimer().start(2, function(t:FlxTimer) {
-				openSubState(new SansResultsSubstate());
-			});
-		}
-	}
+		sans.visible = false;
 
-	function spawnOurp():Void {
-		enemy = new Ourp(rand);
-		enemyGroup.add(enemy);
-		trace('spawned');
-	}
+		sans.kill();
 
-	function spawnBullet():Void {
-		bullet = new Bullet();
-		bullet.setPosition(sans.x, sans.y);
-		bulletGroup.add(bullet);
+		black = new FlxSprite(0, 0).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
+		black.alpha = 0;
+		add(black);
 
-		if (FlxG.mouse.screenX <= sans.x - 10) {
-			bullet.velocity.x = -400;
-		}
-		if (FlxG.mouse.screenX >= sans.x + 10) {
-			bullet.velocity.x = 400;
-		}
-		if (FlxG.mouse.screenY < sans.y - 50) {
-			if (FlxG.mouse.screenY > 0) bullet.velocity.y = -FlxG.mouse.screenY;
-			if (FlxG.mouse.screenY < 0) bullet.velocity.y = FlxG.mouse.screenY * 2;
-		}
-		if (FlxG.mouse.screenY > sans.y + 50) {
-			if (FlxG.mouse.screenY < 0) bullet.velocity.y = -FlxG.mouse.screenY;
-			if (FlxG.mouse.screenY > 0) bullet.velocity.y = FlxG.mouse.screenY;
-		}
-
-		trace('shot');
-	}
-
-	function doSpawnLoop():Void {
-		new FlxTimer().start(10, function(t:FlxTimer) {
-			spawnOurp();
-			doSpawnLoop();
+		FlxTween.tween(black, {alpha: 1}, 2, {ease: FlxEase.sineInOut});
+		new FlxTimer().start(2, function(t:FlxTimer)
+		{
+			openSubState(new SansResultsSubstate());
 		});
+	}
+
+	function spawnOurp():Void
+	{
+		var _enemy = enemyGroup.recycle(Ourp, () -> new Ourp(enemyIndex));
+		_enemy.setIndex(enemyIndex);
+		_enemy.target = sans;
+		enemyGroup.add(_enemy);
+	}
+
+	function spawnBullet():Void
+	{
+		var _bullet = bulletGroup.recycle(Bullet);
+		//maybe use rotated width ?
+		_bullet.setPosition(sans.x + ((sans.width - _bullet.width) / 2), sans.y + ((sans.height - _bullet.height) / 2));
+		bulletGroup.add(_bullet);
+
+		_bullet.velocity.set(BULLET_SPEED);
+		_bullet.velocity.degrees = FlxAngle.angleBetweenPoint(_bullet, FlxG.mouse.getPosition(), true);
+
+		_bullet.angle = _bullet.velocity.degrees;
+
+	}
+
+	function doSpawnLoop():Void
+	{
+		new FlxTimer().start(10, function(t:FlxTimer)
+		{
+			spawnOurp();
+		}, 0);
 	}
 
 	override public function update(elapsed:Float)
 	{
-		rand = FlxG.random.int(1, 7);
+		enemyIndex = FlxG.random.int(1, 7, [enemyIndex]);
 
-		var moveSpeed = 200;
+		handleInputs();
 
-		if (FlxG.keys.pressed.A) {
-			sans.velocity.x = -moveSpeed;
+		if (!hasDied)
+		{
+			FlxG.collide(sans, floor, onTouchFloor);
+
+			inline function loadAndPlaySound(sound:FlxSound)
+			{
+				sound.loadEmbedded(Paths.sound(FlxG.random.getObject(soundNames)), true);
+				sound.play();
+				sound.volume = 0.5;
+				return sound;
+			}
+
+			// technically less optimal but its cleaner ig
+			final pressedInputs = [FlxG.keys.justPressed.A, FlxG.keys.justPressed.D, FlxG.keys.justPressed.W];
+			final releasedInputs = [FlxG.keys.justReleased.A, FlxG.keys.justReleased.D, FlxG.keys.justReleased.W];
+			final sounds = [soundA, soundD, soundW];
+
+			for (i in 0...3)
+			{
+				if (pressedInputs[i])
+					loadAndPlaySound(sounds[i]);
+				else if (releasedInputs[i])
+					sounds[i].stop();
+			}
+		}
+
+		// check if enemy is dead
+		enemyGroup.forEachAlive(enemy ->
+		{
+			bulletGroup.forEachAlive(bullet ->
+			{
+				if (bullet.getScreenBounds().overlaps(enemy.getHitbox()))
+				{
+					enemy.takeDamage();
+					bullet.kill();
+				}
+			});
+			// FlxG.overlap(enemy, bulletGroup, enemy.takeDamage);
+		});
+
+		// clean up
+		bulletGroup.forEachAlive(bullet ->
+		{
+			if (bullet.x > FlxG.width || (bullet.x + bullet.width) < 0 || (bullet.y + bullet.height) < 0 || bullet.y > FlxG.height)
+			{
+				bullet.kill();
+			}
+		});
+
+		super.update(elapsed);
+	}
+
+	function handleInputs()
+	{
+		final MOVE_SPEED = 200;
+		final GRAVITY = 400;
+
+		if (FlxG.keys.pressed.A)
+		{
+			sans.velocity.x = -MOVE_SPEED;
 			sans.flipX = true;
-		} else if (FlxG.keys.pressed.D) {
-			sans.velocity.x = moveSpeed;
+		}
+		else if (FlxG.keys.pressed.D)
+		{
+			sans.velocity.x = MOVE_SPEED;
 			sans.flipX = false;
-		} else {
+		}
+		else
+		{
 			sans.velocity.x = 0;
 		}
 
-		if (FlxG.keys.justPressed.W) {
-			sans.velocity.y = -400;
+		if (FlxG.keys.justPressed.W)
+		{
+			sans.velocity.y = -GRAVITY;
 		}
 
-		FlxG.collide(sans, floor, onTouchFloor);
+		#if debug
+		if (FlxG.keys.justPressed.G)
+		{
+			spawnOurp();
+		}
+		#end
 
-		if (FlxG.mouse.justPressed) {
-			if (!shot) {
-				add(bulletGroup);
-				shot = true;
-			} 
+		if (FlxG.mouse.justPressed)
+		{
 			spawnBullet();
 		}
-
-		if (!hasDied) {
-			if (FlxG.keys.justPressed.A) {
-				var s = FlxG.random.getObject(soundNames);
-				soundA = new FlxSound();
-				soundA.loadEmbedded(Paths.sound(s), true);
-				soundA.play();
-				FlxG.sound.list.add(soundA);
-				soundA.volume = 0.5;
-			} else if (FlxG.keys.justReleased.A && soundA != null) {
-				soundA.stop();
-				soundA = null;
-			}
-	
-			if (FlxG.keys.justPressed.D) {
-				var s = FlxG.random.getObject(soundNames);
-				soundD = new FlxSound();
-				soundD.loadEmbedded(Paths.sound(s), true);
-				soundD.play();
-				FlxG.sound.list.add(soundD);
-				soundD.volume = 0.5;
-			} else if (FlxG.keys.justReleased.D && soundD != null) {
-				soundD.stop();
-				soundD = null;
-			}
-	
-			if (FlxG.keys.justPressed.W) {
-				var s = FlxG.random.getObject(soundNames);
-				soundW = new FlxSound();
-				soundW.loadEmbedded(Paths.sound(s), true);
-				soundW.play();
-				soundW.volume = 0.5;
-				FlxG.sound.list.add(soundW);
-			} else if (FlxG.keys.justReleased.W && soundW != null) {
-				soundW.stop();
-				soundW = null;
-			} 
-		}
-
-		super.update(elapsed);
 	}
 }
 #end
