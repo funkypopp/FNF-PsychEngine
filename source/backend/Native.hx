@@ -3,7 +3,6 @@ package backend;
 import lime.app.Application;
 import lime.system.Display;
 import lime.system.System;
-
 import flixel.util.FlxColor;
 
 #if (cpp && windows)
@@ -64,8 +63,8 @@ class Native
 
 	public static function registerDPIAware():Void
 	{
-		#if (cpp && windows)
-		// DPI Scaling fix for windows 
+		#if (cpp && windows && !debug)
+		// DPI Scaling fix for windows
 		// this shouldn't be needed for other systems
 		// Credit to YoshiCrafter29 for finding this function
 		untyped __cpp__('
@@ -83,10 +82,12 @@ class Native
 		#end
 	}
 
-	private static var fixedScaling:Bool = false;
+	private static var fixedScaling:Bool = #if debug true #else false #end;
+
 	public static function fixScaling():Void
 	{
-		if (fixedScaling) return;
+		if (fixedScaling)
+			return;
 		fixedScaling = true;
 
 		#if (cpp && windows)
