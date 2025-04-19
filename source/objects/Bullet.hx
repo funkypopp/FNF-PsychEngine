@@ -3,6 +3,7 @@ package objects;
 import states.AchievementsMenuState;
 
 class Bullet extends FlxSprite {
+    public var __garbaged:Bool = false;
     public function new() {
         super();
 

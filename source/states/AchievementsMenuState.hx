@@ -135,7 +135,8 @@ class AchievementsMenuState extends MusicBeatState
 	function spawnBullet():Void
 	{
 		var _bullet = bulletGroup.recycle(Bullet);
-		//maybe use rotated width ?
+		_bullet.__garbaged = false;
+		// maybe use rotated width ?
 		_bullet.setPosition(sans.x + ((sans.width - _bullet.width) / 2), sans.y + ((sans.height - _bullet.height) / 2));
 		bulletGroup.add(_bullet);
 
@@ -143,7 +144,6 @@ class AchievementsMenuState extends MusicBeatState
 		_bullet.velocity.degrees = FlxAngle.angleBetweenPoint(_bullet, FlxG.mouse.getPosition(), true);
 
 		_bullet.angle = _bullet.velocity.degrees;
-
 	}
 
 	function doSpawnLoop():Void
@@ -186,24 +186,24 @@ class AchievementsMenuState extends MusicBeatState
 			}
 		}
 
-		// check if enemy is dead
-		enemyGroup.forEachAlive(enemy ->
+		bulletGroup.forEachAlive(bullet ->
 		{
-			bulletGroup.forEachAlive(bullet ->
+			enemyGroup.forEachAlive(enemy ->
 			{
 				if (bullet.getScreenBounds().overlaps(enemy.getHitbox()))
 				{
 					enemy.takeDamage();
-					bullet.kill();
+					bullet.__garbaged = true;
 				}
 			});
-			// FlxG.overlap(enemy, bulletGroup, enemy.takeDamage);
 		});
+
 
 		// clean up
 		bulletGroup.forEachAlive(bullet ->
 		{
-			if (bullet.x > FlxG.width || (bullet.x + bullet.width) < 0 || (bullet.y + bullet.height) < 0 || bullet.y > FlxG.height)
+			if (bullet.x > FlxG.width
+				|| (bullet.x + bullet.width) < 0 || (bullet.y + bullet.height) < 0 || bullet.y > FlxG.height || bullet.__garbaged)
 			{
 				bullet.kill();
 			}
