@@ -19,7 +19,7 @@ class SansResultsSubstate extends MusicBeatSubstate
         dancingSans.animation.play('dance', true);
 
         scoreTxt = new FlxText(50, -300, 0, "SCORE: " + AchievementsMenuState.score);
-        scoreTxt.setFormat(Paths.font('undertale.ttf'), 48, FlxColor.WHITE, "left", 0xFF000000);
+        scoreTxt.setFormat(Paths.font('undertale.ttf'), 48, FlxColor.WHITE, "right", 0xFF000000);
         add(scoreTxt);
         scoreTxt.screenCenter();
         scoreTxt.x -= 450;

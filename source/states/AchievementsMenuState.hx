@@ -9,6 +9,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import substates.SansResultsSubstate;
 import objects.Ourp;
+import objects.Bullet;
 
 #if ACHIEVEMENTS_ALLOWED
 class AchievementsMenuState extends MusicBeatState
@@ -33,7 +34,12 @@ class AchievementsMenuState extends MusicBeatState
 	var enemyGroup:FlxTypedGroup<Ourp> = new FlxTypedGroup<Ourp>();
 	var enemy:Ourp;
 
-	var spawned:Bool = false;
+	var bulletGroup:FlxTypedGroup<Bullet> = new FlxTypedGroup<Bullet>();
+	public static var bullet:Bullet;
+	var shot:Bool = false;
+
+	var imCheckingSmthRq:Float;
+	var againLol:Float;
 
 	public static var score:Int = 0;
 	public static var wave:Int = 0;
@@ -41,6 +47,13 @@ class AchievementsMenuState extends MusicBeatState
 	override public function create()
 	{
 		super.create();
+
+		FlxG.mouse.visible = true;
+
+		imCheckingSmthRq = FlxG.width / 2;
+		againLol = FlxG.height / 2;
+
+		trace('xCenter: ' + imCheckingSmthRq + ',yCenter: ' + againLol);
 
 		if(FlxG.sound.music != null)
 			FlxG.sound.music.stop();
@@ -78,11 +91,11 @@ class AchievementsMenuState extends MusicBeatState
 	{	//funky i fixed your goddamm sound ok
 		if (!hasDied){ //shyge fix sound okay thanks
 
-			deathSound.play(); 
 			if(FlxG.sound.music != null)
 				FlxG.sound.music.stop();
-			
 
+			deathSound.play(); 
+			
 			hasDied = true;
 			sans.y += 1000;
 			sans.kill();
@@ -102,14 +115,29 @@ class AchievementsMenuState extends MusicBeatState
 		enemy = new Ourp(rand);
 		enemyGroup.add(enemy);
 		trace('spawned');
+	}
 
-		if (!spawned) {
-			spawned = true;
+	function spawnBullet():Void {
+		bullet = new Bullet();
+		bullet.setPosition(sans.x, sans.y);
+		bulletGroup.add(bullet);
+
+		if (FlxG.mouse.screenX <= sans.x - 10) {
+			bullet.velocity.x = -400;
 		}
-		else {
-			spawned = false;
-			spawned = true;
+		if (FlxG.mouse.screenX >= sans.x + 10) {
+			bullet.velocity.x = 400;
 		}
+		if (FlxG.mouse.screenY < sans.y - 50) {
+			if (FlxG.mouse.screenY > 0) bullet.velocity.y = -FlxG.mouse.screenY;
+			if (FlxG.mouse.screenY < 0) bullet.velocity.y = FlxG.mouse.screenY * 2;
+		}
+		if (FlxG.mouse.screenY > sans.y + 50) {
+			if (FlxG.mouse.screenY < 0) bullet.velocity.y = -FlxG.mouse.screenY;
+			if (FlxG.mouse.screenY > 0) bullet.velocity.y = FlxG.mouse.screenY;
+		}
+
+		trace('shot');
 	}
 
 	function doSpawnLoop():Void {
@@ -140,6 +168,14 @@ class AchievementsMenuState extends MusicBeatState
 		}
 
 		FlxG.collide(sans, floor, onTouchFloor);
+
+		if (FlxG.mouse.justPressed) {
+			if (!shot) {
+				add(bulletGroup);
+				shot = true;
+			} 
+			spawnBullet();
+		}
 
 		if (!hasDied) {
 			if (FlxG.keys.justPressed.A) {
