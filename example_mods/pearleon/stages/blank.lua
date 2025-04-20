@@ -17,8 +17,6 @@ function onCreate()
     end
 end
 function onCreatePost()
-	addHaxeLibrary("ShaderFilter", "openfl.filters")
-	
 	scaleObject('boyfriend', 0.2, 0.2)
 	scaleObject('dad', 0.2, 0.2)
 	updateHitbox('boyfriend')
@@ -35,16 +33,19 @@ function onCreatePost()
 	};
 	]])
 
-	initLuaShader('perspective')
-	initLuaShader('defective lens')
+	if shadersEnabled then
+		initLuaShader('perspective')
+		initLuaShader('defective lens')
+	end
 	
-	makeLuaSprite('fl-bg', 'fl studio', 90, 90)
-	scaleObject('fl-bg', 0.8, 0.8)
+	makeLuaSprite('fl-bg', 'fl studio', 90, 75) 
+	if not shadersEnabled then setProperty('fl-bg.x', -45) setProperty('fl-bg.y', 40) end
+	if shadersEnabled then scaleObject('fl-bg', 0.8, 0.8) end
 	setScrollFactor('fl-bg', 0.1, 0.1)
 	runHaxeCode("game.getLuaObject('fl-bg').camera = getVar('camBG');")
 	
 	makeLuaSprite('metronome', 'metronome', 0, 0)
-	scaleObject('fl-bg', 0.8, 0.8)
+	if shadersEnabled then scaleObject('fl-bg', 0.8, 0.8) end
 	setProperty('metronome.x', getProperty('fl-bg.x')-14)
 	setProperty('metronome.y', getProperty('fl-bg.y'))
 	setScrollFactor('metronome', 0.1, 0.1)
@@ -74,17 +75,18 @@ function onCreatePost()
 	
 	setPerspective('floor', 0.35)
 	
-	makeLuaSprite("bgShader")
-	makeGraphic("bgShader", screenWidth, screenHeight)
-	setSpriteShader("bgShader", 'defective lens')
-	addHaxeLibrary("ShaderFilter", "openfl.filters")
-	runHaxeCode([[
-		var game = PlayState.instance;
-		getVar('camBG').setFilters([
-			new ShaderFilter(game.getLuaObject("bgShader").shader)
+	if shadersEnabled then
+		makeLuaSprite("bgShader")
+		makeGraphic("bgShader", screenWidth, screenHeight)
+		setSpriteShader("bgShader", 'defective lens')
+		runHaxeCode([[
+			var game = PlayState.instance;
+			getVar('camBG').setFilters([
+				new ShaderFilter(game.getLuaObject("bgShader").shader)
 			]);
-	]])
-	setShaderFloat("bgShader", "pDistortion", 2)
+		]])
+		setShaderFloat("bgShader", "pDistortion", 2)
+	end
 	
 	addLuaSprite('fl-bg')
 	addLuaSprite('metronome')
@@ -99,15 +101,17 @@ function onSongStart()
 end
 
 function onSectionHit()
-	setProperty('metronome.x', getProperty('fl-bg.x')-14)
-	doTweenX('metronomeTween', 'metronome', (getProperty('fl-bg.width')*4)/0.85, ((curBpm/60)*4)/getProperty('playbackRate'))
+	if songName == "my-first-song" and not (curSection >= 20 and curSection < 24) then
+		setProperty('metronome.x', getProperty('fl-bg.x')-14)
+		doTweenX('metronomeTween', 'metronome', (getProperty('fl-bg.width')*4)/0.85, ((curBpm/60)*4)/getProperty('playbackRate'))
+	end
 end
 
 function onUpdate()
 	setProperty('floor.x', 16) -- because for some reason it slides when the characters started singing
 end
 function onUpdatePost()
-	setProperty('camBG.zoom', 0.8+(getProperty('camGame.zoom')*0.15))
+	setProperty('camBG.zoom', 0.85+(getProperty('camGame.zoom')*0.15))
 	callMethod('camBG.scroll.set', {getProperty('camGame.scroll.x'), getProperty('camGame.scroll.y')})
 end
 
