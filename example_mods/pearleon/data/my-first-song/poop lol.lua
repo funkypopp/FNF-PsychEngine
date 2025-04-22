@@ -7,7 +7,7 @@ function smoothCam(t, x, y, dur, tween, zoom)
 		import psychlua.LuaUtils;
 	]])
 	if not tween then tween = 'linear' end
-	if not dur then dur = 0.001 else dur = dur / playbackRate end
+	if not dur then dur = 0.0001 else dur = dur / playbackRate end
 	
 	local prevCamX, prevCamY = camX, camY
 	if x and (x ~= camX) then
@@ -98,20 +98,19 @@ end
 
 function onBeatHit()
 	if curBeat == 15 then
-		doTweenZoom('startZoom2', 'camGame', 2.7, 1.5, 'quintInOut')
-		smoothCam('startPos', 165, 527, 1.75, 'cubeInOut')
+		doTweenZoom('startZoom2', 'camGame', 2.7, 1.5/playbackRate, 'quintInOut')
+		smoothCam('startPos', 165, 527, 2, 'cubeInOut')
 		callScript('data/my-first-song/blackBars', 'moveBars', {'Start', 0, (curBpm/60)/4, 'expoIn'})
 	elseif curBeat == 16 then
 		doTweenAlpha('uiFadeIn', 'camHUD', 1, 0.1, 'linear')
 	elseif curBeat == 46 then
 		doTweenAlpha('fl-gobyebye', 'fl-bg', 0, 1.5, 'quadIn')
-		smoothCam('okletsdothisok', 210, 475, 1.35, 'cubeInOut', 1.5)
+		smoothCam('okletsdothisok', 210, 475, ((curBpm/60)/2)-0.25, 'cubeInOut', 1.5)
 	elseif curBeat == 78 then
 		smoothCam('postobf', 310, 527, (curBpm/60)/2, 'quadOut')
-		cancelTween('bamZoom')
-		doTweenZoom('zoomtobf', 'camGame', 3, 1.25, 'quartIn')
-		setProperty('defaultCamZoom', 3)
-		doTweenAngle('angletobf', 'camGame', -80, 1.25, 'expoIn')
+		doTweenZoom('zoomtobf', 'camGame', 3.33, ((curBpm/60)/2)/playbackRate, 'quartIn')
+		setProperty('defaultCamZoom', 3.25)
+		doTweenAngle('angletobf', 'camGame', -75, ((curBpm/60)/2)/playbackRate, 'expoIn')
 	elseif curBeat == 79 then
 		callScript('data/my-first-song/blackBars', 'moveBars', {'', 100, (curBpm/60)/4, 'sineOut'})
 	elseif curBeat == 81 then
@@ -130,12 +129,13 @@ function onBeatHit()
 	elseif curBeat == 86 then
 		doTweenAlpha('camHUDA', 'camHUD', 1, (curBpm/60)/2)
 	elseif curBeat == 95 then
-		doTweenZoom('zoomIn', 'camGame', 2.9, (curBpm/60)/4, 'quartOut')
+		doTweenZoom('zoomIn', 'camGame', 2.9, ((curBpm/60)/4)/playbackRate, 'quartOut')
 		callScript('data/my-first-song/blackBars', 'moveBars', {'blink', 33, (curBpm/60)/5, 'expoOut'})
 	elseif curBeat == 96 then
 		smoothCam('okdoitagainok', 210, 475, (curBpm/60)/4, 'cubeInOut', 1.5)
 	elseif curBeat == 111 then
-		doTweenZoom('zoomIn', 'camGame', 2.95, (curBpm/60)/4, 'expoIn')
+		cancelTween('bamZoom')
+		doTweenZoom('zoomIn', 'camGame', 2.95, ((curBpm/60)/4)/playbackRate, 'expoIn')
 		callScript('data/my-first-song/blackBars', 'moveBars', {'', 33, (curBpm/60)/5, 'expoOut'})
 	elseif curBeat == 112 then
 		callScript('data/my-first-song/blackBars', 'moveBars', {'', 0, 0.1})

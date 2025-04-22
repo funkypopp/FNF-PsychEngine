@@ -1,6 +1,9 @@
 local closePercentage = 0
 
 function moveBars(tag, percent, dur, tween)
+	if not tween then tween = 'linear' end
+	if not dur then dur = 0.0001 else dur = (dur / playbackRate) end
+
 	local y1 = -360 + (percent/100) * 360
 	local y2 = 720 - (percent/100) * 360
 
