@@ -1,5 +1,6 @@
 package psychlua;
 
+import flixel.group.FlxGroup;
 import flixel.FlxBasic;
 import objects.Character;
 import psychlua.LuaUtils;
@@ -191,7 +192,11 @@ class HScript extends Iris
 		#if flxanimate
 		set('FlxAnimate', FlxAnimate);
 		#end
+		
+		set('FlxGroup',FlxGroup);
 
+		set('Circle',objects.Circle);
+		
 		// Functions & Variables
 		set('setVar', function(name:String, value:Dynamic)
 		{

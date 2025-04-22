@@ -70,14 +70,14 @@ function onBeatHit()
 	if ((curBeat >= 48 and curBeat < 80) or (curBeat >= 97 and curBeat < 128)) and shaderStage ~= 1 then
 		shaderStage = 1
 		runHaxeCode([[
-			game.camGame.setFilters([
+			game.camGame.filters = ([
 				new ShaderFilter(game.getLuaObject("ChromaticAberration").shader),
 				new ShaderFilter(game.getLuaObject("Bloom").shader)
 			]);
-			game.camHUD.setFilters([
+			game.camHUD.filters = ([
 				new ShaderFilter(game.getLuaObject("ChromaticAberration").shader)
 			]);
-			getVar('camBG').setFilters([
+			getVar('camBG').filters = ([
 				new ShaderFilter(game.getLuaObject("bgShader").shader),
 				new ShaderFilter(game.getLuaObject("ChromaticAberration").shader),
 				new ShaderFilter(game.getLuaObject("Bloom").shader)
@@ -85,7 +85,7 @@ function onBeatHit()
 		]])
 		if curBeat == 78 then
 			runHaxeCode([[
-				game.camGame.setFilters([
+				game.camGame.filters = ([
 					new ShaderFilter(game.getLuaObject("ChromaticAberration").shader),
 					new ShaderFilter(game.getLuaObject("Bloom").shader),
 					new ShaderFilter(game.getLuaObject("HueSatCon").shader)
@@ -97,11 +97,11 @@ function onBeatHit()
 	elseif (curBeat >= 80 and curBeat < 97) and shaderStage ~= 2 then
 		shaderStage = 2
 		runHaxeCode([[
-			game.camGame.setFilters([
+			game.camGame.filters = ([
 				new ShaderFilter(game.getLuaObject("HueSatCon").shader),
 				new ShaderFilter(game.getLuaObject("GaussianBlur").shader)
 			]);
-			getVar('camBG').setFilters([
+			getVar('camBG').filters = ([
 				new ShaderFilter(game.getLuaObject("bgShader").shader),
 				new ShaderFilter(game.getLuaObject("HueSatCon").shader),
 				new ShaderFilter(game.getLuaObject("GaussianBlur").shader)
@@ -110,9 +110,9 @@ function onBeatHit()
 	elseif ((curBeat < 48) or (curBeat > 128)) and shaderStage ~= 1 then
 		shaderStage = 0
 		runHaxeCode([[
-			game.camGame.setFilters([]);
-			game.camHUD.setFilters([]);
-			getVar('camBG').setFilters([
+			game.camGame.filters = ([]);
+			game.camHUD.filters = ([]);
+			getVar('camBG').filters = ([
 				new ShaderFilter(game.getLuaObject("bgShader").shader),
 			]);
 		]])
