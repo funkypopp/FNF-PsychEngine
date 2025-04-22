@@ -1,15 +1,4 @@
 local shaderStage = 0
-
-local saturation = 0.0
-local brightness = 0.0
-
-local bloomBright = 1.9
-local bloomAmount = 0
-
-local chromAmount = 0.0
-
-local blurAmount = 30
-
 function onCreate()
 	if not shadersEnabled then
 		close(true);
@@ -63,8 +52,6 @@ function tweenNum4()
 	setShaderFloat("HueSatCon", "saturation", getProperty('HueSatCon.x'))
 	setShaderFloat("HueSatCon", "brightness", getProperty('HueSatCon.y'))
 end
-function tweenNum5() end
-function tweenNum6() end
 
 function onBeatHit()
 	if ((curBeat >= 48 and curBeat < 80) or (curBeat >= 97 and curBeat < 128)) and shaderStage ~= 1 then
@@ -82,32 +69,21 @@ function onBeatHit()
 				new ShaderFilter(game.getLuaObject("ChromaticAberration").shader),
 				new ShaderFilter(game.getLuaObject("Bloom").shader)
 			]);
+			return;
 		]])
-		if curBeat == 78 then
-			runHaxeCode([[
-				game.camGame.filters = ([
-					new ShaderFilter(game.getLuaObject("ChromaticAberration").shader),
-					new ShaderFilter(game.getLuaObject("Bloom").shader),
-					new ShaderFilter(game.getLuaObject("HueSatCon").shader)
-				]);
-			]])
-			setProperty('HueSatCon.x', 0); setProperty('HueSatCon.y', 0);
-			startTween('tween_HueSatCon', 'HueSatCon', {x = 15, y = 90}, (curBpm/60)/2,{ease = 'quintInOut', onUpdate = 'tweenNum4'})
-		end
 	elseif (curBeat >= 80 and curBeat < 97) and shaderStage ~= 2 then
 		shaderStage = 2
 		runHaxeCode([[
 			game.camGame.filters = ([
-				new ShaderFilter(game.getLuaObject("HueSatCon").shader),
 				new ShaderFilter(game.getLuaObject("GaussianBlur").shader)
 			]);
 			getVar('camBG').filters = ([
 				new ShaderFilter(game.getLuaObject("bgShader").shader),
-				new ShaderFilter(game.getLuaObject("HueSatCon").shader),
 				new ShaderFilter(game.getLuaObject("GaussianBlur").shader)
 			]);
+			return;
 		]])
-	elseif ((curBeat < 48) or (curBeat > 128)) and shaderStage ~= 1 then
+	elseif ((curBeat < 48) or (curBeat >= 128)) and shaderStage ~= 0 then
 		shaderStage = 0
 		runHaxeCode([[
 			game.camGame.filters = ([]);
@@ -115,10 +91,19 @@ function onBeatHit()
 			getVar('camBG').filters = ([
 				new ShaderFilter(game.getLuaObject("bgShader").shader),
 			]);
+			return;
 		]])
 	end
-	if curBeat == 82 then
+	if curBeat == 78 and shaderStage == 1 then
+		runHaxeCode([[
+			game.camGame.filters.push(new ShaderFilter(game.getLuaObject("HueSatCon").shader));
+			getVar('camBG').filters.push(new ShaderFilter(game.getLuaObject("HueSatCon").shader));
+			return;
+		]])
+		setProperty('HueSatCon.x', 0); setProperty('HueSatCon.y', 0);
+		startTween('tween_HueSatCon', 'HueSatCon', {y = 55}, ((curBpm/60)/2)/playbackRate,{ease = 'quintInOut', onUpdate = 'tweenNum4'})
+	elseif curBeat == 82 and shaderStage == 2 then
 		setProperty('GaussianBlur.x', 30)
-		startTween('tween_GaussianBlur', 'GaussianBlur', {x = 0}, 5.5,{ease = 'linear', onUpdate = 'tweenNum3'})
+		startTween('tween_GaussianBlur', 'GaussianBlur', {x = 0}, 5.5/playbackRate,{ease = 'linear', onUpdate = 'tweenNum3'})
 	end
 end
