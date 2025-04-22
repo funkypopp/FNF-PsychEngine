@@ -44,9 +44,13 @@ class CircleShader extends FlxShader
 
 			vec4 sampleTex = flixel_texture2D(bitmap,openfl_TextureCoordv);
 
+			circle.rgb *= sampleTex.a;
+
 			float alpha = circle.r + circle.g + circle.b / 3.0;
 
 			vec4 finalTex = mix(vec4(circle,0.0),sampleTex,alpha);
+
+			finalTex.rgba *= sampleTex.a;
 			
 			gl_FragColor = finalTex;
 		}
