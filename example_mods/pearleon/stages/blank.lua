@@ -1,3 +1,5 @@
+local stepFlag = 0
+
 function onCreate()
 	createInstance('camBG', 'flixel.FlxCamera', {0, 0, screenWidth, screenHeight})
 	setProperty('camBG.scroll.x', 1)
@@ -87,6 +89,12 @@ function onCreatePost()
 		]])
 		setShaderFloat("bgShader", "pDistortion", 2)
 	end
+
+	makeLuaSprite('darkBG', nil, -1000, -1000)
+	makeGraphic('darkBG', 3000, 4000, '000000')
+	updateHitbox('darkBG')
+	setScrollFactor('darkBG', 0, 0)
+	setProperty('darkBG.alpha', 0)
 	
 	addLuaSprite('fl-bg')
 	addLuaSprite('metronome')
@@ -94,10 +102,12 @@ function onCreatePost()
 	addLuaSprite('shadows')
 	addLuaSprite('floor')
 	addLuaSprite('floorwall')
+	addLuaSprite('darkBG')
 end
 
 function onSongStart()
 	onSectionHit()
+	onStepHit()
 end
 
 function onSectionHit()
@@ -105,6 +115,36 @@ function onSectionHit()
 		setProperty('metronome.x', getProperty('fl-bg.x')-14)
 		doTweenX('metronomeTween', 'metronome', (getProperty('fl-bg.width')*4)/0.85, ((curBpm/60)*4)/getProperty('playbackRate'))
 	end
+end
+luaDebugMode = true
+local stepParams = {
+	{56, 'tween', 0.8, 1.5},
+	{64, 0, 'flash', 0.5},
+	{384, 1},
+	{390, 0, 'flash', 1}
+}
+
+function onStepHit()
+	if songName == "my-first-song" then
+		for i, s in ipairs(stepParams) do
+			if curStep >= s[1] and stepFlag <= i then
+				cancelTween('theCamThatHadToStepUp')
+				if (s[2] == 'tween') then
+					doTweenAlpha('theCamThatHadToStepUp', 'darkBG', s[3], s[4], 'sineInOut')
+				else
+					setProperty('darkBG.alpha', s[2])
+					if s[3] ~= nil and s[3] == 'flash' then
+						cameraFlash('camBG', 'FFFFFF', s[4], true) -- Use Psych Engine's built-in camera flash
+					end
+				end
+				incrementStepFlag()
+			end
+		end
+	end
+end
+
+function incrementStepFlag()
+	stepFlag = stepFlag + 1
 end
 
 function onUpdate()

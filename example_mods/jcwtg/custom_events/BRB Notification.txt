@@ -1,0 +1,6 @@
+Displays a Discord Notification from Vaderlings
+in the top-right corner of camHUD.
+
+Has a 1/50 chance to be SkyanUltra instead.
+(Or you can set value 1 to 'skyan' to force
+trigger it instead.)
