@@ -1,4 +1,4 @@
-package objects;
+package objects.sans;
 
 import flixel.util.FlxDestroyUtil;
 import flixel.graphics.frames.FlxFrame.FlxFrameAngle;

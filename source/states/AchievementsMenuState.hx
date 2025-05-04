@@ -10,8 +10,8 @@ import flixel.sound.FlxSound;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import substates.SansResultsSubstate;
-import objects.Ourp;
-import objects.Bullet;
+import objects.sans.Ourp;
+import objects.sans.Bullet;
 
 #if ACHIEVEMENTS_ALLOWED
 class AchievementsMenuState extends MusicBeatState
@@ -97,7 +97,7 @@ class AchievementsMenuState extends MusicBeatState
 	}
 
 	/**
-	 * Collided with the floor. trigges result screen.
+	 * Collided with the floor. Triggers result screen.
 	 */
 	function onTouchFloor(obj1:FlxObject, obj2:FlxObject):Void
 	{ // funky i fixed your goddamm sound ok

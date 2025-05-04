@@ -1,4 +1,4 @@
-package objects;
+package objects.sans;
 
 import states.AchievementsMenuState;
 
