@@ -27,7 +27,7 @@ class Bullet extends FlxSprite {
     public override function update(elapsed:Float):Void {
         super.update(elapsed);
 
-        if (x > FlxG.width || (x + width) < 0 || (y + height) < 0 || y > FlxG.height || __garbaged)
+        if (x > FlxG.width || (x + width) < 0 || (y + width) < 0 || (y-width) > FlxG.height || __garbaged)
         {
             trail.kill();
             kill();

@@ -3,6 +3,8 @@ package substates;
 import states.UntunedRoguelikeState;
 import lime.app.Application;
 
+#if debug import states.MainMenuState; #end
+
 class SansResultsSubstate extends MusicBeatSubstate
 {
 
@@ -19,7 +21,7 @@ class SansResultsSubstate extends MusicBeatSubstate
         dancingSans.animation.play('dance', true);
 
         scoreTxt = new FlxText(50, -300, 0, "SCORE: " + UntunedRoguelikeState.score);
-        scoreTxt.setFormat(Paths.font('undertale.ttf'), 48, FlxColor.WHITE, "right", 0xFF000000);
+        scoreTxt.setFormat(Paths.font('undertale.ttf'), 48, FlxColor.WHITE, "left", 0xFF000000);
         add(scoreTxt);
         scoreTxt.screenCenter();
         scoreTxt.x -= 450;
@@ -33,7 +35,7 @@ class SansResultsSubstate extends MusicBeatSubstate
         waveTxt.y += 150;
         waveTxt.visible = false;
 
-        waveNum = new FlxText(50, 0, 0, '0000');
+        waveNum = new FlxText(50, 0, 0, StringTools.lpad(Std.string(UntunedRoguelikeState.wave), "0", 4));
         waveNum.setFormat(Paths.font('undertale.ttf'), 128, FlxColor.WHITE, "left", 0xFF000000);
         add(waveNum);  
         waveNum.screenCenter();
@@ -46,13 +48,15 @@ class SansResultsSubstate extends MusicBeatSubstate
         resultsMusic = new FlxSound();
         resultsMusic.loadEmbedded(Paths.music('sans results'), false);
         resultsMusic.play();
+        #if !debug
         resultsMusic.onComplete = function() {
-            Application.current.window.alert("You're a faggot", "oops");
+            Application.current.window.alert("You're a faggot.", "oops!");
             #if DISCORD_ALLOWED
             DiscordClient.shutdown();
             #end
             Sys.exit(1);
         }
+        #end
         new FlxTimer().start(1.8, function(t:FlxTimer) {
             scoreTxt.visible = true;
             trace('kms');
@@ -62,5 +66,14 @@ class SansResultsSubstate extends MusicBeatSubstate
                 waveNum.visible = true;
             });
         });
+    }
+    override function update(elapsed:Float)
+    {
+        super.update(elapsed);
+        if (controls.ACCEPT || controls.BACK)
+        {
+            resultsMusic.stop();
+            #if debug MusicBeatState.switchState(new MainMenuState()); #end
+        }
     }
 }

@@ -207,21 +207,10 @@ class AchievementsMenuState extends MusicBeatState
 			{
 				if (bullet.getScreenBounds().overlaps(enemy.getHitbox()))
 				{
-					enemy.takeDamage();
+					enemy.takeDamage(bullet.damage);
 					bullet.__garbaged = true;
 				}
 			});
-		});
-
-
-		// clean up
-		bulletGroup.forEachAlive(bullet ->
-		{
-			if (bullet.x > FlxG.width
-				|| (bullet.x + bullet.width) < 0 || (bullet.y + bullet.height) < 0 || bullet.y > FlxG.height || bullet.__garbaged)
-			{
-				bullet.kill();
-			}
 		});
 
 		super.update(elapsed);
