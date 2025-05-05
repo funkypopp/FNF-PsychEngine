@@ -12,9 +12,9 @@ import flixel.util.FlxTimer;
 import substates.SansResultsSubstate;
 import objects.sans.Ourp;
 import objects.sans.Bullet;
-import objects.Powerup;
+import objects.sans.Powerup;
 
-class AchievementsMenuState extends MusicBeatState
+class UntunedRoguelikeState extends MusicBeatState
 {
 	public static var score:Int = 0;
 	public static var wave:Int = 0;
@@ -138,12 +138,12 @@ class AchievementsMenuState extends MusicBeatState
 	function spawnPower():Void
 	{
 		// data if you're seeing this i googled what the underscore before the variable means and now im learning
-		var _powerup = powerupGroup.recycle(Powerup, () -> new Powerup());
-		_powerup.setPosition(FlxG.random.int(-FlxG.width + 600, FlxG.width), 0);
+		var _powerup = powerupGroup.recycle(Powerup, () -> new Powerup(powerIndex));
+		_powerup.setPosition(FlxG.random.int(-200, 1280), 0);
 		_powerup.screenCenter(Y);
-		_powerup.y -= _powerup.y;
-		_powerup.setIndex(powerIndex);
+		_powerup.y -= _powerup.y + 50;
 		_powerup.velocity.y = 200;
+        _powerup.setIndex(powerIndex);
 		powerupGroup.add(_powerup);
 	}
 
@@ -173,6 +173,9 @@ class AchievementsMenuState extends MusicBeatState
 	{
 		enemyIndex = FlxG.random.int(1, 7, [enemyIndex]);
 
+        // @skyanultra idk why but this one isnt working and isnt changing the powerup index @skyanultra please help me :pleading_face:
+        powerIndex = FlxG.random.int(1, 7, [powerIndex]);
+
 		handleInputs();
 
 		if (!hasDied)
@@ -199,6 +202,10 @@ class AchievementsMenuState extends MusicBeatState
 				else if (releasedInputs[i])
 					sounds[i].stop();
 			}
+
+            if (FlxG.keys.justPressed.R) {
+                MusicBeatState.resetState();
+            }
 		}
 
 		bulletGroup.forEachAlive(bullet ->
@@ -207,7 +214,7 @@ class AchievementsMenuState extends MusicBeatState
 			{
 				if (bullet.getScreenBounds().overlaps(enemy.getHitbox()))
 				{
-					enemy.takeDamage();
+					enemy.takeDamage(5);
 					bullet.__garbaged = true;
 				}
 			});

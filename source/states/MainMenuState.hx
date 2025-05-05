@@ -306,7 +306,7 @@ class MainMenuState extends MusicBeatState
 
 						#if ACHIEVEMENTS_ALLOWED
 						case 'achievements':
-							MusicBeatState.switchState(new AchievementsMenuState());
+							MusicBeatState.switchState(new UntunedRoguelikeState());
 						#end
 
 						case 'credits':

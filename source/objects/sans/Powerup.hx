@@ -1,12 +1,13 @@
-package objects;
+package objects.sans;
 
-import states.AchievementsMenuState;
+import states.UntunedRoguelikeState;
 
 class Powerup extends FlxSprite {
     public var __garbaged:Bool = false;
     public var __grabbed:Bool = false;
-    public function new() {
+    public function new(poop:Int) {
         super();
+        setIndex(poop);
     }
 
     public function setIndex(index:Int) {

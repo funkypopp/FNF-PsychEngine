@@ -2,15 +2,20 @@ package objects.sans;
 
 import flixel.util.FlxDestroyUtil;
 import flixel.graphics.frames.FlxFrame.FlxFrameAngle;
-import states.AchievementsMenuState;
+import states.UntunedRoguelikeState;
 import flixel.FlxObject;
 
 class Ourp extends FlxSprite
 {
-	/**
+	/*
 	 * object to follow.
 	 */
 	public var target:FlxObject;
+	/*
+	 * screen bounds for the little bastard to move around in.
+	 */
+	private var screenBoundsX = FlxG.width + 100;
+	private var screenBoundsY = FlxG.height + 100;
 
 	private var rand:Int;
 	private var poopy:Float;
@@ -42,18 +47,23 @@ class Ourp extends FlxSprite
 		kys = index;
 		speed = FlxG.random.int(60, 120);
 		loadGraphic(Paths.image('ourp/' + kys));
-		x = FlxG.random.int(-1000, 1000);
-		y = FlxG.random.int(-500, 500);
 		scale.x = poopy;
 		scale.y = poopy;
 		centerOffsets();
+		if (FlxG.random.bool()) { // this is a 50/50 chance to spawn on the top or bottom edge of the screen to prevent unfair spawns
+			x = FlxG.random.int(-100 - Std.int(width), screenBoundsX);
+			y = FlxG.random.bool() ? -100 - Std.int(height) : screenBoundsY;
+		} else {
+			x = FlxG.random.bool() ? -100 - Std.int(width) : screenBoundsX;
+			y = FlxG.random.int(-100 - Std.int(height), screenBoundsY);
+		}
 		updateHitbox();
 	}
 
-	public function takeDamage():Void
+	public function takeDamage(damageTaken):Void
 	{
-		poopHealth -= 10;
-		AchievementsMenuState.score += 5;
+		poopHealth -= damageTaken;
+		UntunedRoguelikeState.score += 5;
 		trace(poopHealth);
 		shakeCount = 5;
 
@@ -87,17 +97,22 @@ class Ourp extends FlxSprite
 
 		if (target != null)
 		{
-			inline function moveToward(from:Float, to:Float, delta:Float) // godot
-				return Math.abs(to - from) <= delta ? to : from + FlxMath.signOf(to - from) * delta;
-
-			final targetX = target.x + target.width / 2;
-			final targetY = target.y + target.height / 2;
+			final targetX = (target.x + target.width / 2) - (width / 2);
+			final targetY = (target.y + target.height / 2) - (height / 2);
 
 			final nextX = Math.abs(targetX - this.x) * FlxMath.signOf(targetX - this.x); // i think the abs and sign of part is pointless but idc
 			final nextY = Math.abs(targetY - this.y) * FlxMath.signOf(targetY - this.y);
 
-			velocity.x = moveToward(velocity.x, nextX, speed * elapsed);
-			velocity.y = moveToward(velocity.y, nextY, speed * elapsed);
+			if (x < -100 || x > screenBoundsX || y < -100 || y > screenBoundsY) // if outside the screen bounds, heavily limit movement so it doesn't go offscreen
+			{
+				velocity.x = FlxMath.signOf(nextX) * (speed*15) * elapsed;
+				velocity.y = FlxMath.signOf(nextY) * (speed*15)  * elapsed;
+			}
+			else
+			{
+				velocity.x += FlxMath.signOf(nextX) * speed * elapsed;
+				velocity.y += FlxMath.signOf(nextY) * speed * elapsed;
+			}
 		}
 	}
 

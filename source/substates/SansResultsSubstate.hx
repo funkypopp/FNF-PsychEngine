@@ -1,6 +1,6 @@
 package substates;
 
-import states.AchievementsMenuState;
+import states.UntunedRoguelikeState;
 import lime.app.Application;
 
 class SansResultsSubstate extends MusicBeatSubstate
@@ -18,7 +18,7 @@ class SansResultsSubstate extends MusicBeatSubstate
         dancingSans.animation.addByPrefix('dance', 'unlock', 12, true);
         dancingSans.animation.play('dance', true);
 
-        scoreTxt = new FlxText(50, -300, 0, "SCORE: " + AchievementsMenuState.score);
+        scoreTxt = new FlxText(50, -300, 0, "SCORE: " + UntunedRoguelikeState.score);
         scoreTxt.setFormat(Paths.font('undertale.ttf'), 48, FlxColor.WHITE, "right", 0xFF000000);
         add(scoreTxt);
         scoreTxt.screenCenter();
