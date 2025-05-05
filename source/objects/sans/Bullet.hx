@@ -20,8 +20,7 @@ class Bullet extends FlxSprite {
         updateHitbox();
 
         // cool trail fuck yeah
-        trail = new FlxTrail(this, null, 10, 1, 0.6, 0.1);
-        FlxG.state.add(trail);
+        FlxG.state.add(trail = new FlxTrail(this, null, 10, 1, 0.6, 0.1));
     }
 
     public override function update(elapsed:Float):Void {
