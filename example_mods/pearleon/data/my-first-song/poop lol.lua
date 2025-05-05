@@ -132,7 +132,10 @@ function onBeatHit()
 		doTweenZoom('zoomIn', 'camGame', 2.9, ((curBpm/60)/4)/playbackRate, 'quartOut')
 		callScript('data/my-first-song/blackBars', 'moveBars', {'blink', 33, (curBpm/60)/5, 'expoOut'})
 	elseif curBeat == 96 then
-		smoothCam('okdoitagainok', 210, 475, (curBpm/60)/4, 'cubeInOut', 1.5)
+		smoothCam('snapZoom', 165, 527, nil, 'linear', 3.5)
+		doTweenZoom('zoomIn', 'camGame', 3.3, ((curBpm/60)/4)/playbackRate, 'expoIn')
+	elseif curBeat == 97 then
+		smoothCam('okdoitagainok', 210, 475, (curBpm/60)/8, 'cubeInOut', 1.5)
 	elseif curBeat == 111 then
 		cancelTween('bamZoom')
 		doTweenZoom('zoomIn', 'camGame', 2.95, ((curBpm/60)/4)/playbackRate, 'expoIn')

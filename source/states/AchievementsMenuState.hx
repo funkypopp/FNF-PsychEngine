@@ -10,10 +10,10 @@ import flixel.sound.FlxSound;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import substates.SansResultsSubstate;
-import objects.Ourp;
-import objects.Bullet;
+import objects.sans.Ourp;
+import objects.sans.Bullet;
+import objects.Powerup;
 
-#if ACHIEVEMENTS_ALLOWED
 class AchievementsMenuState extends MusicBeatState
 {
 	public static var score:Int = 0;
@@ -37,6 +37,14 @@ class AchievementsMenuState extends MusicBeatState
 		return (enemyIndex = Math.round(FlxMath.bound(value, 1, 7)));
 	}
 
+	// blatently copying from you im so sorry :sob:
+	var powerIndex(default, set):Int = 1;
+
+	function set_powerIndex(value:Int):Int
+	{
+		return (powerIndex = Math.round(FlxMath.bound(value, 1, 7)));
+	}
+
 	final soundNames:Array<String> = ["sans1", "sans2", "sans3", "sans4"];
 
 	var soundA:FlxSound = FlxG.sound.load(Paths.sound("sans1"));
@@ -48,9 +56,7 @@ class AchievementsMenuState extends MusicBeatState
 
 	final bulletGroup:FlxTypedGroup<Bullet> = new FlxTypedGroup<Bullet>();
 	final enemyGroup:FlxTypedGroup<Ourp> = new FlxTypedGroup<Ourp>();
-
-	var imCheckingSmthRq:Float;
-	var againLol:Float;
+	final powerupGroup:FlxTypedGroup<Powerup> = new FlxTypedGroup<Powerup>();
 
 	override public function create()
 	{
@@ -61,11 +67,6 @@ class AchievementsMenuState extends MusicBeatState
 		super.create();
 
 		FlxG.mouse.visible = true;
-
-		imCheckingSmthRq = FlxG.width / 2;
-		againLol = FlxG.height / 2;
-
-		trace('xCenter: ' + imCheckingSmthRq + ',yCenter: ' + againLol);
 
 		FlxG.sound.playMusic(Paths.music('sans 1'), 1);
 
@@ -94,10 +95,12 @@ class AchievementsMenuState extends MusicBeatState
 
 		add(enemyGroup);
 		add(bulletGroup);
+		add(powerupGroup);
+		spawnPower();
 	}
 
 	/**
-	 * Collided with the floor. trigges result screen.
+	 * Collided with the floor. Triggers result screen.
 	 */
 	function onTouchFloor(obj1:FlxObject, obj2:FlxObject):Void
 	{ // funky i fixed your goddamm sound ok
@@ -130,6 +133,18 @@ class AchievementsMenuState extends MusicBeatState
 		_enemy.setIndex(enemyIndex);
 		_enemy.target = sans;
 		enemyGroup.add(_enemy);
+	}
+
+	function spawnPower():Void
+	{
+		// data if you're seeing this i googled what the underscore before the variable means and now im learning
+		var _powerup = powerupGroup.recycle(Powerup, () -> new Powerup());
+		_powerup.setPosition(FlxG.random.int(-FlxG.width + 600, FlxG.width), 0);
+		_powerup.screenCenter(Y);
+		_powerup.y -= _powerup.y;
+		_powerup.setIndex(powerIndex);
+		_powerup.velocity.y = 200;
+		powerupGroup.add(_powerup);
 	}
 
 	function spawnBullet():Void
@@ -192,21 +207,10 @@ class AchievementsMenuState extends MusicBeatState
 			{
 				if (bullet.getScreenBounds().overlaps(enemy.getHitbox()))
 				{
-					enemy.takeDamage();
+					enemy.takeDamage(bullet.damage);
 					bullet.__garbaged = true;
 				}
 			});
-		});
-
-
-		// clean up
-		bulletGroup.forEachAlive(bullet ->
-		{
-			if (bullet.x > FlxG.width
-				|| (bullet.x + bullet.width) < 0 || (bullet.y + bullet.height) < 0 || bullet.y > FlxG.height || bullet.__garbaged)
-			{
-				bullet.kill();
-			}
 		});
 
 		super.update(elapsed);
@@ -250,4 +254,3 @@ class AchievementsMenuState extends MusicBeatState
 		}
 	}
 }
-#end

@@ -33,18 +33,21 @@ function centerCamera(?poop:Float) {
 }
 
 function onCreatePost() {
-    centerCamera();
-
-    game.boyfriendGroup.visible = false;
-    game.dadGroup.visible = false;
+    if (game.curSong == 'locked') {
+        centerCamera();
+        game.boyfriendGroup.visible = false;
+        game.dadGroup.visible = false;
+    }
 }
 
 function onBeatHit() {
-    if (curBeat == 143) {
-        FlxTween.tween(gummy, {alpha: 1}, 0.8, {ease: FlxEase.cubeIn});
-    }
-    if (curBeat == 176) {
-        FlxTween.tween(gummy, {alpha: 0}, 1.5, {ease: FlxEase.cubeOut});
+    if (game.curSong == 'locked') {
+        if (curBeat == 0) {
+            FlxTween.tween(gummy, {alpha: 1}, 0.8, {ease: FlxEase.cubeIn});
+        }
+        if (curBeat == 16) {
+            FlxTween.tween(gummy, {alpha: 0}, 1.5, {ease: FlxEase.cubeOut});
+        }
     }
 }
 
