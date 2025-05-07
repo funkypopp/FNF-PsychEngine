@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="gfsnail.png" width="8190" height="2839">
+	<SubTexture name="gf bopleft0001" x="5734" y="463" width="818" height="460" rotated="true" frameX="-99" frameY="-120" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0002" x="2849" y="1388" width="819" height="473" rotated="true" frameX="-92" frameY="-120" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0003" x="5318" y="1867" width="799" height="479" rotated="true" frameX="-86" frameY="-140" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0004" x="4511" y="1867" width="804" height="478" rotated="true" frameX="-86" frameY="-140" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0005" x="6962" y="2113" width="804" height="480" rotated="true" frameX="-84" frameY="-140" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0006" x="5308" y="2349" width="801" height="487" rotated="true" frameX="-84" frameY="-140" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0007" x="1" y="2342" width="815" height="485" rotated="true" frameX="-86" frameY="-126" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0008" x="5427" y="926" width="812" height="462" rotated="true" frameX="-97" frameY="-126" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0009" x="6555" y="463" width="815" height="460" rotated="true" frameX="-99" frameY="-123" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0010" x="6555" y="463" width="815" height="460" rotated="true" frameX="-99" frameY="-123" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0011" x="7373" y="704" width="816" height="460" rotated="true" frameX="-99" frameY="-122" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0012" x="7373" y="704" width="816" height="460" rotated="true" frameX="-99" frameY="-122" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0013" x="7373" y="704" width="816" height="460" rotated="true" frameX="-99" frameY="-122" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopleft0014" x="7373" y="704" width="816" height="460" rotated="true" frameX="-99" frameY="-122" frameWidth="571" frameHeight="944"/>
+	<SubTexture name="gf bopright0001" x="3784" y="925" width="818" height="461" rotated="true" frameX="-98" frameY="-123" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0002" x="3671" y="1389" width="819" height="473" rotated="true" frameX="-92" frameY="-123" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0003" x="4493" y="1389" width="801" height="473" rotated="true" frameX="-92" frameY="-141" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0004" x="6974" y="1634" width="806" height="476" rotated="true" frameX="-88" frameY="-141" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0005" x="1" y="1863" width="813" height="476" rotated="true" frameX="-88" frameY="-134" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0006" x="819" y="2342" width="810" height="485" rotated="true" frameX="-86" frameY="-134" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0007" x="3052" y="2344" width="822" height="485" rotated="true" frameX="-86" frameY="-122" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0008" x="4605" y="925" width="819" height="461" rotated="true" frameX="-98" frameY="-122" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0009" x="1" y="925" width="817" height="460" rotated="true" frameX="-99" frameY="-124" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0010" x="1" y="925" width="817" height="460" rotated="true" frameX="-99" frameY="-124" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0011" x="821" y="925" width="817" height="460" rotated="true" frameX="-99" frameY="-124" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0012" x="821" y="925" width="817" height="460" rotated="true" frameX="-99" frameY="-124" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0013" x="821" y="925" width="817" height="460" rotated="true" frameX="-99" frameY="-124" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf bopright0014" x="821" y="925" width="817" height="460" rotated="true" frameX="-99" frameY="-124" frameWidth="571" frameHeight="947"/>
+	<SubTexture name="gf cheer0001" x="6133" y="1393" width="838" height="474" rotated="true" frameX="-0" frameY="-0" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0002" x="6120" y="1870" width="839" height="479" rotated="true" frameX="-0" frameY="-0" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0003" x="5297" y="1391" width="833" height="473" rotated="true" frameX="-6" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0004" x="817" y="1863" width="838" height="476" rotated="true" frameX="-3" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0005" x="817" y="1863" width="838" height="476" rotated="true" frameX="-3" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0006" x="6112" y="2352" width="835" height="486" rotated="true" frameX="-0" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0007" x="6112" y="2352" width="835" height="486" rotated="true" frameX="-0" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0008" x="6242" y="926" width="832" height="464" rotated="true" frameX="-10" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0009" x="6242" y="926" width="832" height="464" rotated="true" frameX="-10" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0010" x="6242" y="926" width="832" height="464" rotated="true" frameX="-10" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0011" x="6242" y="926" width="832" height="464" rotated="true" frameX="-10" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0012" x="6242" y="926" width="832" height="464" rotated="true" frameX="-10" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0013" x="6242" y="926" width="832" height="464" rotated="true" frameX="-10" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0014" x="6242" y="926" width="832" height="464" rotated="true" frameX="-10" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf cheer0015" x="6242" y="926" width="832" height="464" rotated="true" frameX="-10" frameY="-6" frameWidth="486" frameHeight="844"/>
+	<SubTexture name="gf jump off0001" x="1" y="1" width="815" height="459" rotated="true" frameX="-5" frameY="-10" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0002" x="819" y="1" width="815" height="459" rotated="true" frameX="-5" frameY="-10" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0003" x="819" y="1" width="815" height="459" rotated="true" frameX="-5" frameY="-10" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0004" x="7077" y="1167" width="825" height="464" rotated="true" frameX="-0" frameY="-0" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0005" x="7077" y="1167" width="825" height="464" rotated="true" frameX="-0" frameY="-0" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0006" x="1637" y="1" width="813" height="459" rotated="true" frameX="-5" frameY="-12" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0007" x="1637" y="1" width="813" height="459" rotated="true" frameX="-5" frameY="-12" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0008" x="2453" y="1" width="725" height="459" rotated="true" frameX="-5" frameY="-100" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0009" x="3181" y="1" width="675" height="459" rotated="true" frameX="-5" frameY="-207" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0010" x="3181" y="1" width="675" height="459" rotated="true" frameX="-5" frameY="-207" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0011" x="3859" y="1" width="695" height="459" rotated="true" frameX="-5" frameY="-187" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0012" x="3859" y="1" width="695" height="459" rotated="true" frameX="-5" frameY="-187" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0013" x="4557" y="1" width="695" height="459" rotated="true" frameX="-5" frameY="-187" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0014" x="4557" y="1" width="695" height="459" rotated="true" frameX="-5" frameY="-187" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0015" x="4557" y="1" width="695" height="459" rotated="true" frameX="-5" frameY="-187" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0016" x="4557" y="1" width="695" height="459" rotated="true" frameX="-5" frameY="-187" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0017" x="4557" y="1" width="695" height="459" rotated="true" frameX="-5" frameY="-187" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0018" x="5255" y="1" width="696" height="459" rotated="true" frameX="-5" frameY="-186" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf jump off0019" x="5255" y="1" width="696" height="459" rotated="true" frameX="-5" frameY="-186" frameWidth="464" frameHeight="882"/>
+	<SubTexture name="gf sad0001" x="5954" y="1" width="820" height="459" rotated="true" frameX="-0" frameY="-0" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0002" x="6777" y="1" width="820" height="459" rotated="true" frameX="-0" frameY="-0" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0003" x="1" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0004" x="820" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0005" x="1639" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0006" x="2458" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0007" x="3277" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0008" x="3277" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0009" x="3277" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0010" x="4096" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0011" x="4096" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0012" x="4096" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0013" x="4915" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0014" x="4915" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf sad0015" x="4915" y="463" width="816" height="459" rotated="true" frameX="-0" frameY="-4" frameWidth="459" frameHeight="820"/>
+	<SubTexture name="gf standing cheer0001" x="1641" y="925" width="705" height="460" rotated="true" frameX="-13" frameY="-12" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0002" x="1" y="1388" width="705" height="472" rotated="true" frameX="-6" frameY="-12" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0003" x="709" y="1388" width="714" height="472" rotated="true" frameX="-6" frameY="-3" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0004" x="1658" y="1863" width="714" height="476" rotated="true" frameX="-2" frameY="-3" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0005" x="2375" y="1864" width="702" height="476" rotated="true" frameX="-2" frameY="-15" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0006" x="1632" y="2342" width="702" height="485" rotated="true" frameX="-0" frameY="-15" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0007" x="2337" y="2343" width="712" height="485" rotated="true" frameX="-0" frameY="-5" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0008" x="2349" y="925" width="712" height="460" rotated="true" frameX="-13" frameY="-5" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0009" x="2349" y="925" width="712" height="460" rotated="true" frameX="-13" frameY="-5" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0010" x="2349" y="925" width="712" height="460" rotated="true" frameX="-13" frameY="-5" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0011" x="2349" y="925" width="712" height="460" rotated="true" frameX="-13" frameY="-5" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0012" x="2349" y="925" width="712" height="460" rotated="true" frameX="-13" frameY="-5" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0013" x="2349" y="925" width="712" height="460" rotated="true" frameX="-13" frameY="-5" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0014" x="2349" y="925" width="712" height="460" rotated="true" frameX="-13" frameY="-5" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0015" x="2349" y="925" width="712" height="460" rotated="true" frameX="-13" frameY="-5" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0016" x="7600" y="1" width="460" height="700" frameX="-13" frameY="-17" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0017" x="1426" y="1388" width="700" height="472" rotated="true" frameX="-6" frameY="-17" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0018" x="2129" y="1388" width="717" height="472" rotated="true" frameX="-6" frameY="-0" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0019" x="3080" y="1865" width="717" height="476" rotated="true" frameX="-2" frameY="-0" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0020" x="3800" y="1865" width="708" height="476" rotated="true" frameX="-2" frameY="-9" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0021" x="3877" y="2348" width="708" height="485" rotated="true" frameX="-0" frameY="-9" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0022" x="4588" y="2348" width="717" height="485" rotated="true" frameX="-0" frameY="-0" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0023" x="3064" y="925" width="717" height="460" rotated="true" frameX="-13" frameY="-0" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0024" x="3064" y="925" width="717" height="460" rotated="true" frameX="-13" frameY="-0" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0025" x="3064" y="925" width="717" height="460" rotated="true" frameX="-13" frameY="-0" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0026" x="3064" y="925" width="717" height="460" rotated="true" frameX="-13" frameY="-0" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0027" x="3064" y="925" width="717" height="460" rotated="true" frameX="-13" frameY="-0" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0028" x="3064" y="925" width="717" height="460" rotated="true" frameX="-13" frameY="-0" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0029" x="3064" y="925" width="717" height="460" rotated="true" frameX="-13" frameY="-0" frameWidth="485" frameHeight="717"/>
+	<SubTexture name="gf standing cheer0030" x="3064" y="925" width="717" height="460" rotated="true" frameX="-13" frameY="-0" frameWidth="485" frameHeight="717"/>
+</TextureAtlas>

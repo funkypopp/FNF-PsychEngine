@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="cassettearm.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cassette arm idle0000" x="10" y="10" width="580" height="182" pivotX="-56" pivotY="-41.65" frameX="0" frameY="0" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm idle0001" x="10" y="10" width="580" height="182" frameX="0" frameY="0" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm idle0002" x="600" y="10" width="581" height="181" frameX="0" frameY="0" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm idle0003" x="600" y="10" width="581" height="181" frameX="0" frameY="0" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0000" x="1191" y="10" width="570" height="174" pivotX="-59.2" pivotY="-30.5" frameX="-6" frameY="-18" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0001" x="1191" y="10" width="570" height="174" frameX="-6" frameY="-18" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0002" x="10" y="202" width="610" height="194" frameX="0" frameY="-2" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0003" x="10" y="202" width="610" height="194" frameX="0" frameY="-2" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0004" x="630" y="202" width="610" height="194" frameX="0" frameY="0" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0005" x="630" y="202" width="610" height="194" frameX="0" frameY="0" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0006" x="1250" y="202" width="610" height="194" frameX="0" frameY="0" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0007" x="1250" y="202" width="610" height="194" frameX="0" frameY="0" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0008" x="630" y="202" width="610" height="194" frameX="0" frameY="0" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0009" x="630" y="202" width="610" height="194" frameX="0" frameY="0" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0010" x="1250" y="202" width="610" height="194" frameX="0" frameY="0" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0011" x="1250" y="202" width="610" height="194" frameX="0" frameY="0" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0012" x="630" y="202" width="610" height="194" frameX="0" frameY="0" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0013" x="630" y="202" width="610" height="194" frameX="0" frameY="0" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0014" x="1250" y="202" width="610" height="194" frameX="0" frameY="0" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0015" x="1191" y="10" width="570" height="174" frameX="-6" frameY="-18" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0016" x="1191" y="10" width="570" height="174" frameX="-6" frameY="-18" frameWidth="610" frameHeight="196"/>
+	<SubTexture name="cassette arm push0017" x="10" y="10" width="580" height="182" frameX="-6" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0018" x="10" y="10" width="580" height="182" frameX="-6" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0019" x="600" y="10" width="581" height="181" frameX="-5" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0020" x="600" y="10" width="581" height="181" frameX="-5" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0021" x="10" y="10" width="580" height="182" frameX="-6" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0022" x="10" y="10" width="580" height="182" frameX="-6" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0023" x="600" y="10" width="581" height="181" frameX="-5" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0024" x="600" y="10" width="581" height="181" frameX="-5" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0025" x="10" y="10" width="580" height="182" frameX="-6" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0026" x="10" y="10" width="580" height="182" frameX="-6" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0027" x="600" y="10" width="581" height="181" frameX="-5" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0028" x="600" y="10" width="581" height="181" frameX="-5" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0029" x="10" y="10" width="580" height="182" frameX="-6" frameY="-13" frameWidth="581" frameHeight="182"/>
+	<SubTexture name="cassette arm push0030" x="10" y="10" width="580" height="182" frameX="-6" frameY="-13" frameWidth="581" frameHeight="182"/>
+</TextureAtlas>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="noteSplashes-ftt.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ftt splash blue 10000" x="10" y="10" width="106" height="151" pivotX="30.75" pivotY="-40.35" frameX="-59" frameY="-25" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash blue 10001" x="126" y="10" width="172" height="168" frameX="-24" frameY="-19" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash blue 10002" x="308" y="10" width="187" height="187" frameX="-17" frameY="-7" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash blue 10003" x="505" y="10" width="201" height="196" frameX="-8" frameY="-2" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash blue 10004" x="716" y="10" width="211" height="199" frameX="-3" frameY="-3" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash blue 10005" x="10" y="219" width="218" height="208"/>
+	<SubTexture name="ftt splash blue 10006" x="10" y="219" width="218" height="208"/>
+	<SubTexture name="ftt splash green 10000" x="10" y="10" width="106" height="151" pivotX="30.75" pivotY="-40.35" frameX="-59" frameY="-25" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash green 10001" x="126" y="10" width="172" height="168" frameX="-24" frameY="-19" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash green 10002" x="308" y="10" width="187" height="187" frameX="-17" frameY="-7" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash green 10003" x="505" y="10" width="201" height="196" frameX="-8" frameY="-2" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash green 10004" x="716" y="10" width="211" height="199" frameX="-3" frameY="-3" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash green 10005" x="10" y="219" width="218" height="208"/>
+	<SubTexture name="ftt splash green 10006" x="10" y="219" width="218" height="208"/>
+	<SubTexture name="ftt splash purple 10000" x="10" y="10" width="106" height="151" pivotX="30.75" pivotY="-40.35" frameX="-59" frameY="-25" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash purple 10001" x="126" y="10" width="172" height="168" frameX="-24" frameY="-19" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash purple 10002" x="308" y="10" width="187" height="187" frameX="-17" frameY="-7" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash purple 10003" x="505" y="10" width="201" height="196" frameX="-8" frameY="-2" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash purple 10004" x="716" y="10" width="211" height="199" frameX="-3" frameY="-3" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash purple 10005" x="10" y="219" width="218" height="208"/>
+	<SubTexture name="ftt splash purple 10006" x="10" y="219" width="218" height="208"/>
+	<SubTexture name="ftt splash red 10000" x="10" y="10" width="106" height="151" pivotX="30.75" pivotY="-40.35" frameX="-59" frameY="-25" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash red 10001" x="126" y="10" width="172" height="168" frameX="-24" frameY="-19" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash red 10002" x="308" y="10" width="187" height="187" frameX="-17" frameY="-7" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash red 10003" x="505" y="10" width="201" height="196" frameX="-8" frameY="-2" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash red 10004" x="716" y="10" width="211" height="199" frameX="-3" frameY="-3" frameWidth="218" frameHeight="208"/>
+	<SubTexture name="ftt splash red 10005" x="10" y="219" width="218" height="208"/>
+	<SubTexture name="ftt splash red 10006" x="10" y="219" width="218" height="208"/>
+</TextureAtlas>

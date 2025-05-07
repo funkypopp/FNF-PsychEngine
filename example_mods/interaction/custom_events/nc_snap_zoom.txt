@@ -1,0 +1,4 @@
+Zooms in NeoCam instantly
+
+Value 1: Camera Type (g, h)
+Value 2: Amount of Zoom

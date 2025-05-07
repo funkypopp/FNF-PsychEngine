@@ -1,0 +1,4 @@
+Makes the game camera shake. Value 1 affects how much it will shake in those coordinates. 
+
+Value 1: X & Y (Ex: 20,5)
+Value 2: Duration & Ease (Ex: 1,circOut)

@@ -1,0 +1,36 @@
+{
+	"storyName": "THE ONE PIECE IS REAL",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Hot Milk",
+			"snailchan",
+			[
+				246,
+				153,
+				255
+			]
+		],
+		[
+			"Supergirl",
+			"snailchan",
+			[
+				246,
+				153,
+				255
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Snailchan (Freeplay)"
+}

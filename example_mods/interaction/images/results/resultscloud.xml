@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="resultscloud.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="resultscloud0000" x="10" y="10" width="945" height="396" pivotX="0" pivotY="0" frameX="0" frameY="0" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0001" x="10" y="10" width="945" height="396" frameX="0" frameY="0" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0002" x="10" y="10" width="945" height="396" frameX="0" frameY="0" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0003" x="965" y="10" width="900" height="380" frameX="-25" frameY="-9" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0004" x="965" y="10" width="900" height="380" frameX="-25" frameY="-9" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0005" x="965" y="10" width="900" height="380" frameX="-25" frameY="-9" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0006" x="10" y="416" width="894" height="387" frameX="-24" frameY="-5" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0007" x="10" y="416" width="894" height="387" frameX="-24" frameY="-5" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0008" x="10" y="416" width="894" height="387" frameX="-24" frameY="-5" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0009" x="914" y="416" width="885" height="392" frameX="-25" frameY="-10" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0010" x="914" y="416" width="885" height="392" frameX="-25" frameY="-10" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0011" x="914" y="416" width="885" height="392" frameX="-25" frameY="-10" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0012" x="10" y="818" width="890" height="387" frameX="-35" frameY="-1" frameWidth="945" frameHeight="402"/>
+	<SubTexture name="resultscloud0013" x="10" y="818" width="890" height="387" frameX="-35" frameY="-1" frameWidth="945" frameHeight="402"/>
+</TextureAtlas>

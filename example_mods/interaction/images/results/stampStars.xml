@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="stampStars.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="starsGFC0000" x="10" y="10" width="269" height="281" pivotX="0" pivotY="5.1" frameX="0" frameY="-5" frameWidth="271" frameHeight="286"/>
+	<SubTexture name="starsGFC0001" x="10" y="10" width="269" height="281" frameX="0" frameY="-5" frameWidth="271" frameHeight="286"/>
+	<SubTexture name="starsGFC0002" x="289" y="10" width="271" height="279" frameX="0" frameY="0" frameWidth="271" frameHeight="286"/>
+	<SubTexture name="starsGFC0003" x="289" y="10" width="271" height="279" frameX="0" frameY="0" frameWidth="271" frameHeight="286"/>
+	<SubTexture name="starsKFC0000" x="570" y="10" width="425" height="382" pivotX="64" pivotY="93.6" frameX="-2" frameY="0" frameWidth="432" frameHeight="382"/>
+	<SubTexture name="starsKFC0001" x="570" y="10" width="425" height="382" frameX="-2" frameY="0" frameWidth="432" frameHeight="382"/>
+	<SubTexture name="starsKFC0002" x="1005" y="10" width="432" height="373" frameX="0" frameY="-4" frameWidth="432" frameHeight="382"/>
+	<SubTexture name="starsKFC0003" x="1005" y="10" width="432" height="373" frameX="0" frameY="-4" frameWidth="432" frameHeight="382"/>
+	<SubTexture name="starsSFC0000" x="1447" y="10" width="300" height="308" pivotX="10.55" pivotY="19.25" frameX="0" frameY="0" frameWidth="301" frameHeight="308"/>
+	<SubTexture name="starsSFC0001" x="1447" y="10" width="300" height="308" frameX="0" frameY="0" frameWidth="301" frameHeight="308"/>
+	<SubTexture name="starsSFC0002" x="10" y="402" width="299" height="305" frameX="-2" frameY="0" frameWidth="301" frameHeight="308"/>
+	<SubTexture name="starsSFC0003" x="10" y="402" width="299" height="305" frameX="-2" frameY="0" frameWidth="301" frameHeight="308"/>
+</TextureAtlas>

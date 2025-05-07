@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="stamphand.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="stamp0000" x="10" y="10" width="359" height="505" pivotX="0" pivotY="7" frameX="-27" frameY="-145" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0001" x="379" y="10" width="418" height="392" frameX="-4" frameY="0" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0002" x="379" y="10" width="418" height="392" frameX="-4" frameY="0" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0003" x="807" y="10" width="424" height="387" frameX="0" frameY="-7" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0004" x="807" y="10" width="424" height="387" frameX="0" frameY="-7" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0005" x="807" y="10" width="424" height="387" frameX="0" frameY="-7" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0006" x="807" y="10" width="424" height="387" frameX="0" frameY="-7" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0007" x="807" y="10" width="424" height="387" frameX="0" frameY="-7" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0008" x="807" y="10" width="424" height="387" frameX="0" frameY="-7" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0009" x="807" y="10" width="424" height="387" frameX="0" frameY="-7" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0010" x="807" y="10" width="424" height="387" frameX="0" frameY="-7" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0011" x="807" y="10" width="424" height="387" frameX="0" frameY="-7" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0012" x="807" y="10" width="424" height="387" frameX="0" frameY="-7" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0013" x="807" y="10" width="424" height="387" frameX="0" frameY="-7" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0014" x="807" y="10" width="424" height="387" frameX="0" frameY="-7" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0015" x="1241" y="10" width="485" height="347" frameX="-90" frameY="-73" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0016" x="1241" y="10" width="485" height="347" frameX="-90" frameY="-73" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0017" x="10" y="525" width="442" height="366" frameX="-94" frameY="-43" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0018" x="10" y="525" width="442" height="366" frameX="-94" frameY="-43" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0019" x="10" y="525" width="442" height="366" frameX="-94" frameY="-43" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0020" x="10" y="525" width="442" height="366" frameX="-94" frameY="-43" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0021" x="10" y="525" width="442" height="366" frameX="-94" frameY="-43" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0022" x="462" y="525" width="417" height="392" frameX="-37" frameY="-20" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0023" x="462" y="525" width="417" height="392" frameX="-37" frameY="-20" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0024" x="889" y="525" width="415" height="394" frameX="-37" frameY="-16" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0025" x="889" y="525" width="415" height="394" frameX="-37" frameY="-16" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0026" x="1314" y="525" width="392" height="414" frameX="-48" frameY="-38" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0027" x="1314" y="525" width="392" height="414" frameX="-48" frameY="-38" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0028" x="10" y="949" width="359" height="505" frameX="-27" frameY="-177" frameWidth="575" frameHeight="682"/>
+	<SubTexture name="stamp0029" x="379" y="949" width="0" height="0" frameX="1805" frameY="-592" frameWidth="575" frameHeight="682"/>
+</TextureAtlas>

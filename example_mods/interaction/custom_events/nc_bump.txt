@@ -1,0 +1,4 @@
+Bumps the camera in NeoCam manually.
+
+Value 1: Cam Bump Power
+Value 2: HUD Bump Power

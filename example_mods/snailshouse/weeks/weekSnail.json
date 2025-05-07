@@ -1,0 +1,54 @@
+{
+	"storyName": "THE ONE PIECE IS REAL",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Pixel Galaxy",
+			"snailchan",
+			[
+				246,
+				153,
+				255
+			]
+		],
+		[
+			"Pastel",
+			"snailchan",
+			[
+				246,
+				153,
+				255
+			]
+		],
+		[
+			"Twinklestar",
+			"snailchan",
+			[
+				246,
+				153,
+				255
+			]
+		],
+		[
+			"Imaginary Express",
+			"snailchan",
+			[
+				246,
+				153,
+				255
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Snailchan"
+}

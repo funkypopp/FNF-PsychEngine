@@ -1,0 +1,25 @@
+{
+	"directory": "week2",
+	"defaultZoom": 0.8,
+	"stageUI": "",
+
+	"boyfriend": [1000, 400],
+	"girlfriend": [600, 130],
+	"opponent": [-50, 400],
+	"hide_girlfriend": true,
+
+	"camera_boyfriend": [50, -100],
+	"camera_opponent": [-50, 0],
+	"camera_girlfriend": [750, 200],
+	"camera_speed": 1,
+
+	"preload": {
+		"images/vegas": 1
+	},
+
+	"_editorMeta": {
+		"dad": "spooky",
+		"boyfriend": "bf",
+		"gf": "gf"
+	}
+}
