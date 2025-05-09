@@ -1,0 +1,5 @@
+This. Is FAKE Cinema. Fuck my life. (Doesn't hide the HUD.)
+
+Value 1: Enable/Disable (true/false)
+Value 2: Focus Amount: 0-360, Angle, in/out, slow/fast, Time
+(Default: 100,0,in,slow,0.2)

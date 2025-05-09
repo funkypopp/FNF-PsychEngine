@@ -384,7 +384,7 @@
 			"altAnim": false,
 			"bpm": 128,
 			"changeBPM": false,
-			"mustHitSection": true
+			"mustHitSection": false
 		},
 		{
 			"sectionNotes": [
@@ -402,7 +402,7 @@
 			"altAnim": false,
 			"bpm": 128,
 			"changeBPM": false,
-			"mustHitSection": true
+			"mustHitSection": false
 		},
 		{
 			"sectionNotes": [
@@ -746,7 +746,7 @@
 			"altAnim": false,
 			"bpm": 128,
 			"changeBPM": false,
-			"mustHitSection": false
+			"mustHitSection": true
 		},
 		{
 			"sectionNotes": [
@@ -864,7 +864,7 @@
 			"altAnim": false,
 			"bpm": 128,
 			"changeBPM": false,
-			"mustHitSection": true
+			"mustHitSection": false
 		},
 		{
 			"sectionNotes": [
@@ -1068,9 +1068,357 @@
 	],
 	"events": [
 		[
+			2000,
+			[
+				["nc_snap_target", "plr", ""],
+				["nc_zoom_game", "1.0", "0.5,cubeOut,false"]
+			]
+		],
+		[
+			4000,
+			[
+				["nc_snap_target", "opp", ""],
+				["nc_zoom_game", "1.1", "0.5,cubeOut,false"]
+			]
+		],
+		[
+			6000,
+			[
+				["nc_snap_target", "plr", ""],
+				["nc_zoom_game", "1.2", "0.5,cubeOut,false"]
+			]
+		],
+		[
+			8000,
+			[
+				["nc_zoom_game", "0.9", "1,cubeOut,false"]
+			]
+		],
+		[
+			9250,
+			[
+				["nc_focus", "plr", ""]
+			]
+		],
+		[
+			13250,
+			[
+				["nc_focus", "plr", ""]
+			]
+		],
+		[
+			22000,
+			[
+				["nc_snap_target", "plr", ""]
+			]
+		],
+		[
+			27500,
+			[
+				["nc_focus", "plr", "0.5,circIn,false"]
+			]
+		],
+		[
+			28750,
+			[
+				["nc_snap_zoom", "g", "0.95"]
+			]
+		],
+		[
+			29250,
+			[
+				["nc_snap_zoom", "g", "1.0"]
+			]
+		],
+		[
+			29750,
+			[
+				["nc_zoom_game", "1.05", ""]
+			]
+		],
+		[
+			31000,
+			[
+				["nc_zoom_game", "1.1", "1,circIn,false"]
+			]
+		],
+		[
+			32000,
+			[
+				["nc_zoom_game", "0.9", ""]
+			]
+		],
+		[
 			37500,
 			[
-				["Play Animation", "line", "BF"]
+				["Play Animation", "line", "BF"],
+				["nc_zoom_game", "1.1", "1,sineInOut,false"],
+				["nc_set_target", "plr", "850,600"],
+				["nc_focus", "plr", "0.5,cubeOut,false"]
+			]
+		],
+		[
+			39500,
+			[
+				["nc_set_target", "plr", "450,450"]
+			]
+		],
+		[
+			40000,
+			[
+				["nc_zoom_game", "0.8", ""]
+			]
+		],
+		[
+			41500,
+			[
+				["nc_reload_targets", "", ""]
+			]
+		],
+		[
+			42000,
+			[
+				["nc_zoom_game", "0.9", ""]
+			]
+		],
+		[
+			43500,
+			[
+				["nc_set_target", "plr", "450,450"]
+			]
+		],
+		[
+			44000,
+			[
+				["nc_zoom_game", "0.8", ""]
+			]
+		],
+		[
+			45500,
+			[
+				["nc_reload_targets", "", ""]
+			]
+		],
+		[
+			46000,
+			[
+				["nc_zoom_game", "0.9", ""]
+			]
+		],
+		[
+			47500,
+			[
+				["nc_set_target", "plr", "450,450"]
+			]
+		],
+		[
+			48000,
+			[
+				["nc_zoom_game", "0.8", ""]
+			]
+		],
+		[
+			49500,
+			[
+				["nc_reload_targets", "", ""]
+			]
+		],
+		[
+			50000,
+			[
+				["nc_zoom_game", "0.9", ""]
+			]
+		],
+		[
+			51500,
+			[
+				["nc_set_target", "plr", "450,450"]
+			]
+		],
+		[
+			52000,
+			[
+				["nc_zoom_game", "0.8", ""]
+			]
+		],
+		[
+			53500,
+			[
+				["nc_set_target", "plr", "850,600"]
+			]
+		],
+		[
+			53750,
+			[
+				["nc_focus", "plr", "0.25,circIn,true"],
+				["nc_zoom_game", "0.9", "0.25,circIn,false"]
+			]
+		],
+		[
+			54000,
+			[
+				["nc_snap_zoom", "g", "1"]
+			]
+		],
+		[
+			54500,
+			[
+				["nc_snap_zoom", "g", "1.1"]
+			]
+		],
+		[
+			55000,
+			[
+				["nc_snap_zoom", "g", "1.2"]
+			]
+		],
+		[
+			55250,
+			[
+				["nc_zoom_game", "1.1", "0.25,circIn,false"]
+			]
+		],
+		[
+			55500,
+			[
+				["nc_set_target", "plr", "450,450"],
+				["nc_lock_camera", "false", "false"]
+			]
+		],
+		[
+			55750,
+			[
+				["nc_focus", "plr", "0.25,circIn,"],
+				["nc_zoom_game", "0.8", "0.25,circIn,false"]
+			]
+		],
+		[
+			56250,
+			[
+				["nc_zoom_game", "0.85", "0.25,circIn,false"]
+			]
+		],
+		[
+			56750,
+			[
+				["nc_zoom_game", "0.9", "0.25,circIn,false"]
+			]
+		],
+		[
+			57000,
+			[
+				["nc_zoom_game", "1", "0.5,circIn,false"]
+			]
+		],
+		[
+			57500,
+			[
+				["nc_reload_targets", "", ""],
+				["nc_snap_zoom", "g", "0.9"],
+				["nc_lock_camera", "false", "false"]
+			]
+		],
+		[
+			60750,
+			[
+				["nc_set_target", "plr", "850,600"]
+			]
+		],
+		[
+			61000,
+			[
+				["nc_zoom_game", "1", "1,circInOut,false"],
+				["nc_focus", "plr", "1,circInOut,true"]
+			]
+		],
+		[
+			63000,
+			[
+				["nc_lock_camera", "false", "false"]
+			]
+		],
+		[
+			64500,
+			[
+				["nc_zoom_game", "1.1", "1.5,sineInOut,false"]
+			]
+		],
+		[
+			65500,
+			[
+				["nc_reload_targets", "", ""]
+			]
+		],
+		[
+			66000,
+			[
+				["nc_zoom_game", "0.9", ""]
+			]
+		],
+		[
+			70250,
+			[
+				["nc_zoom_game", "0.95", ""]
+			]
+		],
+		[
+			72000,
+			[
+				["nc_zoom_game", "1", ""]
+			]
+		],
+		[
+			72500,
+			[
+				["nc_zoom_game", "1.025", ""]
+			]
+		],
+		[
+			73000,
+			[
+				["nc_zoom_game", "1.05", ""]
+			]
+		],
+		[
+			73500,
+			[
+				["nc_zoom_game", "1.1", ""]
+			]
+		],
+		[
+			74000,
+			[
+				["nc_zoom_game", "0.9", ""]
+			]
+		],
+		[
+			78500,
+			[
+				["nc_set_target", "plr", "450,450"]
+			]
+		],
+		[
+			79000,
+			[
+				["nc_zoom_game", "0.8", "1,sineInOut,false"]
+			]
+		],
+		[
+			79500,
+			[
+				["nc_focus", "plr", "1,circInOut,true"]
+			]
+		],
+		[
+			80000,
+			[
+				["nc_zoom_game", "1.1", "2,expoIn,true"]
+			]
+		],
+		[
+			82000,
+			[
+				["Camera Fade In", "0.0001", "000000"]
 			]
 		]
 	],

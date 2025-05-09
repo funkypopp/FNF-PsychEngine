@@ -26,9 +26,10 @@ function onEvent(n, v1, v2)
 		if downscroll then
 			makeLuaText('newScoreTxt', 'Score: 0', screenWidth-300, 150, 110)
 		else
-			makeLuaText('newScoreTxt', 'Score : 0', screenWidth-300, 150, 680)
+			makeLuaText('newScoreTxt', 'Score: 0', screenWidth-300, 150, 680)
 		end
 		setTextSize('newScoreTxt', 18)
+		setTextFont('newScoreTxt', 'phantomMuff.ttf')
 		setProperty('newScoreTxt.camera', instanceArg('camHUD'), false, true)
 		setProperty('newScoreTxt.origin.x', screenWidth/2)
 		setObjectOrder('newScoreTxt', getObjectOrder('scoreTxt','uiGroup') - 1, 'uiGroup')

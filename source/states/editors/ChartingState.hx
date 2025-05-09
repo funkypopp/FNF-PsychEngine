@@ -138,7 +138,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 	var mainBox:PsychUIBox;
 	var mainBoxPosition:FlxPoint = FlxPoint.get(920, 40);
 	var infoBox:PsychUIBox;
-	var infoBoxPosition:FlxPoint = FlxPoint.get(1000, 360);
+	var infoBoxPosition:FlxPoint = FlxPoint.get(10, FlxG.height - 300);
 	var upperBox:PsychUIBox;
 	
 	var camUI:FlxCamera;
@@ -216,6 +216,9 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 	var waveformEnabled:Bool = false;
 	var waveformTarget:WaveformTarget = INST;
 
+	var lilBf:FlxSprite;
+    var lilOpp:FlxSprite;
+
 	override function create()
 	{
 		if(Difficulty.list.length < 1) Difficulty.resetList();
@@ -282,6 +285,72 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 		add(behindRenderedNotes);
 		add(curRenderedNotes);
 		add(movingNotes);
+
+		//Little Buddies
+		var lilStage = new FlxSprite(0, 0);
+		lilStage.frames = Paths.getSparrowAtlas('charteditor/littleBuddyStage');
+		lilStage.animation.addByPrefix('idle', 'stage idle', 6, true);
+		lilStage.animation.play('idle');
+
+		lilStage.antialiasing = ClientPrefs.data.antialiasing;
+		lilStage.scrollFactor.set(0, 0);
+		lilStage.scale.set(0.6, 0.6);
+		lilStage.x = FlxG.width - (720 * lilStage.scale.x) - 10;
+		lilStage.y = FlxG.height - (350 * lilStage.scale.y) - 10;
+		lilStage.updateHitbox();
+		add(lilStage);
+
+		lilBf = new FlxSprite(0, 0);
+		lilBf.frames = Paths.getSparrowAtlas('charteditor/littleBuddyBf');
+		lilBf.animation.addByPrefix('idle', 'littleBuddyBf idle', 6, true);
+		lilBf.animation.play('idle');
+		lilBf.color = 0xFFFFFFFF;
+		lilBf.animation.addByPrefix('0a', 'littleBuddyBf left a', 12, false);
+		lilBf.animation.addByPrefix('0e', 'littleBuddyBf left e', 12, false);
+		lilBf.animation.addByPrefix('0o', 'littleBuddyBf left o', 12, false);
+		lilBf.animation.addByPrefix('1a', 'littleBuddyBf down a', 12, false);
+		lilBf.animation.addByPrefix('1e', 'littleBuddyBf down e', 12, false);
+		lilBf.animation.addByPrefix('1o', 'littleBuddyBf down o', 12, false);
+		lilBf.animation.addByPrefix('2a', 'littleBuddyBf up a', 12, false);
+		lilBf.animation.addByPrefix('2e', 'littleBuddyBf up e', 12, false);
+		lilBf.animation.addByPrefix('2o', 'littleBuddyBf up o', 12, false);
+		lilBf.animation.addByPrefix('3a', 'littleBuddyBf right a', 12, false);
+		lilBf.animation.addByPrefix('3e', 'littleBuddyBf right e', 12, false);
+		lilBf.animation.addByPrefix('3o', 'littleBuddyBf right o', 12, false);
+
+		lilBf.antialiasing = ClientPrefs.data.antialiasing;
+		lilBf.scrollFactor.set(0, 0);
+		lilBf.scale.set(0.6, 0.6);
+		lilBf.x = FlxG.width - (720 * lilBf.scale.x) - 10;
+		lilBf.y = FlxG.height - (350 * lilBf.scale.y) - 10;
+		lilBf.updateHitbox();
+		add(lilBf);
+
+		lilOpp = new FlxSprite(0, 0);
+		lilOpp.frames = Paths.getSparrowAtlas('charteditor/littleBuddyOpp');
+		lilOpp.animation.addByPrefix('idle', 'littleBuddyOpp idle', 6, true);
+		lilOpp.animation.play('idle');
+		lilOpp.color = 0xFFFFFFFF;
+		lilOpp.animation.addByPrefix('0a', 'littleBuddyOpp left a', 12, false);
+		lilOpp.animation.addByPrefix('0e', 'littleBuddyOpp left e', 12, false);
+		lilOpp.animation.addByPrefix('0o', 'littleBuddyOpp left o', 12, false);
+		lilOpp.animation.addByPrefix('1a', 'littleBuddyOpp down a', 12, false);
+		lilOpp.animation.addByPrefix('1e', 'littleBuddyOpp down e', 12, false);
+		lilOpp.animation.addByPrefix('1o', 'littleBuddyOpp down o', 12, false);
+		lilOpp.animation.addByPrefix('2a', 'littleBuddyOpp up a', 12, false);
+		lilOpp.animation.addByPrefix('2e', 'littleBuddyOpp up e', 12, false);
+		lilOpp.animation.addByPrefix('2o', 'littleBuddyOpp up o', 12, false);
+		lilOpp.animation.addByPrefix('3a', 'littleBuddyOpp right a', 12, false);
+		lilOpp.animation.addByPrefix('3e', 'littleBuddyOpp right e', 12, false);
+		lilOpp.animation.addByPrefix('3o', 'littleBuddyOpp right o', 12, false);
+		
+		lilOpp.antialiasing = ClientPrefs.data.antialiasing;
+		lilOpp.scrollFactor.set(0, 0);
+		lilOpp.scale.set(0.6, 0.6);
+		lilOpp.x = FlxG.width - (720 * lilOpp.scale.x) - 10;
+		lilOpp.y = FlxG.height - (350 * lilOpp.scale.y) - 10;
+		lilOpp.updateHitbox();
+		add(lilOpp);
 
 		eventLockOverlay = new FlxSprite(gridBg.x, 0).makeGraphic(1, 1, FlxColor.BLACK);
 		eventLockOverlay.alpha = 0.6;
@@ -473,9 +542,9 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 		stageDropDown.list = loadFileList('stages/', 'data/stageList.txt');
 		onChartLoaded();
 
-		var tipText:FlxText = new FlxText(FlxG.width - 210, FlxG.height - 30, 200, 'Press F1 for Help', 20);
+		var tipText:FlxText = new FlxText(10, FlxG.height - 30, 200, 'Press F1 for Help', 20);
 		tipText.cameras = [camUI];
-		tipText.setFormat(null, 16, FlxColor.WHITE, RIGHT);
+		tipText.setFormat(null, 16, FlxColor.WHITE, LEFT);
 		tipText.borderColor = FlxColor.BLACK;
 		tipText.scrollFactor.set();
 		tipText.borderSize = 1;
@@ -492,7 +561,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 		add(tipBg);
 		
 		fullTipText = new FlxText(0, 0, FlxG.width - 200);
-		fullTipText.setFormat(Paths.font('vcr.ttf'), 24, FlxColor.WHITE, CENTER);
+		fullTipText.setFormat(Paths.font('phantomMuff.ttf'), 18, FlxColor.WHITE, CENTER);
 		fullTipText.cameras = [camUI];
 		fullTipText.scrollFactor.set();
 		fullTipText.visible = fullTipText.active = false;
@@ -668,6 +737,9 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 	var autoSaveTime:Float = 0;
 	var autoSaveCap:Int = 2; //in minutes
 	var backupLimit:Int = 10;
+
+	var lilBfResetAnim:Float = 0;
+	var lilOppResetAnim:Float = 0;
 
 	var lastBeatHit:Int = 0;
 	override function update(elapsed:Float)
@@ -925,6 +997,11 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 				}
 				else if(FlxG.keys.pressed.W != FlxG.keys.pressed.S || FlxG.mouse.wheel != 0)
 				{
+					lilOpp.animation.play('idle');
+					lilBf.animation.play('idle');
+					lilBf.color = 0xFFFFFFFF;
+					lilOpp.color = 0xFFFFFFFF;
+
 					if(FlxG.sound.music.playing)
 						setSongPlaying(false);
 
@@ -951,11 +1028,33 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 				else if(FlxG.keys.justPressed.SPACE)
 				{
 					setSongPlaying(!FlxG.sound.music.playing);
+					lilOpp.animation.play('idle');
+					lilBf.animation.play('idle');
+					lilBf.color = 0xFFFFFFFF;
+					lilOpp.color = 0xFFFFFFFF;
 				}
 			}
 
 			if(!songFinished) Conductor.songPosition = FlxMath.bound(FlxG.sound.music.time + Conductor.offset, 0, FlxG.sound.music.length - 1);
 			updateScrollY();
+		}
+
+		if(lilOppResetAnim > 0) {
+			lilOppResetAnim -= elapsed;
+			if(lilOppResetAnim <= 0) {
+				lilOpp.animation.play('idle');
+				lilOpp.color = 0xFFFFFFFF;
+				lilOppResetAnim = 0;
+			}
+		}
+
+		if(lilBfResetAnim > 0) {
+			lilBfResetAnim -= elapsed;
+			if(lilBfResetAnim <= 0) {
+				lilBf.animation.play('idle');
+				lilBf.color = 0xFFFFFFFF;
+				lilBfResetAnim = 0;
+			}
 		}
 
 		super.update(elapsed);
@@ -1474,6 +1573,25 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 						{
 							strumNote.playAnim('confirm', true);
 							strumNote.resetAnim = Math.max(Conductor.stepCrochet * 1.25, note.sustainLength) / 1000 / playbackRate;
+						}
+						if (!note.noAnimation) {
+							var lipSync:String = 'a';
+							if (note.noteType == 'a' || note.noteType == 'e' || note.noteType == 'o')
+							{
+								lipSync = note.noteType;
+							}
+							if (note.mustPress)
+							{
+								lilBf.animation.play("" + (note.noteData % 4) + lipSync, true);
+								lilBf.color = ClientPrefs.data.arrowRGB[(note.noteData % 4)][0];
+								lilBfResetAnim = ((Conductor.stepCrochet * 1.5) + Math.max((Conductor.stepCrochet * 1.5), note.sustainLength)) / 1000 / playbackRate;
+							}
+							else
+							{
+								lilOpp.animation.play("" + (note.noteData % 4) + lipSync, true);
+								lilOpp.color = ClientPrefs.data.arrowRGB[(note.noteData % 4)][0];
+								lilOppResetAnim = ((Conductor.stepCrochet * 1.5) + Math.max((Conductor.stepCrochet * 1.5), note.sustainLength)) / 1000 / playbackRate;
+							}
 						}
 					}
 				}
@@ -4859,6 +4977,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 			}
 		}
 
+		#if MODS_ALLOWED
 		for (directory in Mods.directoriesWithFile(Paths.getSharedPath(), mainFolder))
 		{
 			for (file in FileSystem.readDirectory(directory))
@@ -4878,6 +4997,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 				}
 			}
 		}
+		#end
 		return fileList;
 	}
 	

@@ -1,0 +1,4 @@
+Lets you lock the camera position or zoom.
+
+Value 1: Lock Position (true/false)
+Value 2: Lock Zoom (true/false)

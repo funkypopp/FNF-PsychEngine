@@ -31,12 +31,12 @@ function onEvent(n, v1, v2)
 end
 
 function initializeBGFX()
-    makeLuaSprite('dimBg', '', -3000, -2000)
-    makeGraphic('dimBg', 7500, 4000, 'white')
+    createInstance('dimBg', 'flixel.addons.display.FlxBackdrop', {nil, 0x11, 0})
+    makeGraphic('dimBg', 1000, 1000, 'white')
     setProperty('dimBg.camera', instanceArg('camGame'), false, true)
-    setObjectOrder('dimBg', getObjectOrder('gfGroup')-1)
     setScrollFactor('dimBg', 0, 0)
     setProperty('dimBg.alpha', 0)
-    addLuaSprite('dimBg')
+    setObjectOrder('dimBg', getObjectOrder('gfGroup')-1)
+    addInstance('dimBg', false)
     initialized = true
 end

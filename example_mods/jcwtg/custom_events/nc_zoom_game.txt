@@ -1,0 +1,4 @@
+Zooms in NeoCam (Game-Specific)
+
+Value 1: Zoom Amount
+Value 2: Duration, Ease Type, Camera Lock
