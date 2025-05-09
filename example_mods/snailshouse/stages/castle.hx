@@ -26,29 +26,6 @@ function goIntoTheAir(reverse:Bool) {
     }
 }
 
-function onEvent(ev,v1,v2) {
-    if (ev == '') {
-        switch(v1) {
-            case 'center':
-                if (v2 != null) {
-                    centerCamera(v2);
-                }
-                else {
-                    centerCamera();
-                }
-            case 'fly': 
-                if (v2 == 'true') {
-                    goIntoTheAir(true);
-                }
-                else {
-                    goIntoTheAir(false);
-                }
-            case 'reset':
-                triggerEvent('Camera Follow Pos', '', '');
-        }
-    }
-}
-
 function onCreate() {
     game.gfGroup.scrollFactor.set(1, 1);
 
@@ -74,6 +51,8 @@ function onCreate() {
     addBehindGF(additiveColor);
 }
 
-// function onCreatePost() {
-//     centerCamera(200);
-// }
+function onCreatePost() {
+    if (game.curSong == 'Pixel Galaxy') {
+        camGame.visible = false;
+    }
+}

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="littleBuddyOpp.png"><SubTexture name="littleBuddyOpp idle0000" x="251" y="231" width="131" height="186" frameX="-134" frameY="-55" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp idle0001" x="685" y="180" width="129" height="178" frameX="-136" frameY="-60" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp left a0000" x="0" y="623" width="198" height="166" frameX="-22" frameY="-74" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp left a0001" x="593" y="623" width="184" height="163" frameX="-35" frameY="-77" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp left e0000" x="198" y="623" width="197" height="166" frameX="-23" frameY="-74" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp left e0001" x="859" y="0" width="183" height="163" frameX="-36" frameY="-77" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp left o0000" x="395" y="623" width="198" height="166" frameX="-22" frameY="-74" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp left o0001" x="0" y="789" width="184" height="163" frameX="-35" frameY="-77" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp down a0000" x="859" y="502" width="173" height="107" frameX="-125" frameY="-135" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp down a0001" x="859" y="163" width="181" height="113" frameX="-113" frameY="-129" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp down e0000" x="859" y="609" width="174" height="107" frameX="-124" frameY="-135" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp down e0001" x="859" y="276" width="182" height="113" frameX="-111" frameY="-129" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp down o0000" x="685" y="358" width="174" height="107" frameX="-124" frameY="-135" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp down o0001" x="859" y="389" width="182" height="113" frameX="-111" frameY="-129" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp up a0000" x="0" y="0" width="125" height="231" frameX="-152" frameY="-10" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp up a0001" x="376" y="0" width="125" height="211" frameX="-148" frameY="-30" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp up e0000" x="125" y="0" width="125" height="231" frameX="-152" frameY="-10" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp up e0001" x="0" y="231" width="125" height="211" frameX="-148" frameY="-30" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp up o0000" x="250" y="0" width="126" height="231" frameX="-151" frameY="-10" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp up o0001" x="125" y="231" width="126" height="211" frameX="-147" frameY="-30" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp right a0000" x="501" y="0" width="184" height="181" frameX="-187" frameY="-59" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp right a0001" x="184" y="442" width="173" height="180" frameX="-179" frameY="-62" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp right e0000" x="501" y="181" width="183" height="181" frameX="-188" frameY="-59" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp right e0001" x="357" y="442" width="173" height="180" frameX="-179" frameY="-62" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp right o0000" x="0" y="442" width="184" height="181" frameX="-187" frameY="-59" frameWidth="720" frameHeight="350" />
+<SubTexture name="littleBuddyOpp right o0001" x="685" y="0" width="174" height="180" frameX="-178" frameY="-62" frameWidth="720" frameHeight="350" />
+</TextureAtlas>

@@ -1,0 +1,4 @@
+Targets camera at a specific character or position.
+
+Value 1: Target (plr, opp, center)
+Value 2: Position (x, y)

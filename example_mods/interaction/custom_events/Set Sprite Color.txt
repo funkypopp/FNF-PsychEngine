@@ -1,0 +1,4 @@
+Sets the color of a sprite to whatever you input.
+
+Value 1: Sprite Name
+Value 2: Color (Ex: black, #FF0088FF (ARGB))

@@ -1,0 +1,6 @@
+This. Is REAL Cinema. Fuck your Marvel, your DC, FUCK ALL OF IT.
+(Hides the HUD.)
+
+Value 1: Enable/Disable (true/false)
+Value 2: Focus Amount: 0-360, Angle, in/out, slow/fast, Time
+(Default: 100,0,in,slow,0.2)

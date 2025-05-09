@@ -1,0 +1,14 @@
+Makes a specified note of your choice appear on the camera.
+
+Value 1: Instruction
+Value 2: (Depends on instruction. Check LUA file for better explanation!)
+
+Basic Instructions:
+clear (or nil)
+- clears all notes from screen
+
+scale[x, y]
+- sets scale for when notes appear.
+
+horizontal[dir, line, offset]
+- makes notes appear in a straight line. 

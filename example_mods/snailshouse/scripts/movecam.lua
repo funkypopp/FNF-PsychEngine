@@ -105,6 +105,13 @@ function onEvent(event, value1, value2, strumTime)
 end
 
 function onUpdate()
+	-- if getProperty('isCameraOnForcedPos') == true then
+	-- 	camlock = true
+	-- 	camon = false
+	-- else
+	-- 	camlock = false
+	-- 	camon = true
+	-- end
 	if camlock and camon == true then
 		setProperty('camFollow.x', camlockx)
 		setProperty('camFollow.y', camlocky)

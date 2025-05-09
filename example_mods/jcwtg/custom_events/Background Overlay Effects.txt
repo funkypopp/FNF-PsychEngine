@@ -1,0 +1,11 @@
+Applies a background graphic that goes infront of everything behind GF.
+
+Value 1: Toggle (true/ext/false)
+Value 2 (When True or "Ext"): Alpha, Color, Duration, Ease Type
+Value 2 (When False): Starting Alpha, Color, Duration, Ease Type
+
+Defaults:
+(True/Ext: 0.5,000000,1,circOut)
+(False: 1,ffffff,1,expoOut)
+
+(Note: True resets the alpha of the background back to 0 while Ext doesn't.)

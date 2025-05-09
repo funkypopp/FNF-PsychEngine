@@ -14,6 +14,24 @@ function onCreate() {
     sky.scrollFactor.set(0.2, 0.2);
     addBehindGF(sky);
 
+    var train2:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image("trainbg/train"));
+    train2.scale.set(1.4, 1.4);
+    train2.screenCenter();
+    train2.y += 1175;
+    train2.x -= train2.width * 1.3;
+    train2.cameras = [camGame];
+    train2.scrollFactor.set(1, 1);
+    addBehindGF(train2);
+
+    var train3:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image("trainbg/train"));
+    train3.scale.set(1.4, 1.4);
+    train3.screenCenter();
+    train3.y += 1175;
+    train3.x += train3.width * 1.3;
+    train3.cameras = [camGame];
+    train3.scrollFactor.set(1, 1);
+    addBehindGF(train3);
+
     var train:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image("trainbg/train"));
     train.scale.set(1.4, 1.4);
     train.screenCenter();
@@ -35,9 +53,13 @@ function centerCamera(?poop:Float) {
     }
 }
 
-function goIntoTheAir(reverse:Bool) {
-    if (reverse) {
+function goIntoTheAir(fag:Int) {
+    if (fag == 1) {
         centerCamera(200);
+        FlxTween.tween(game, {defaultCamZoom: 0.5}, 1.437, {ease: FlxEase.cubeInOut});
+    }
+    else if (fag == 2) {
+        triggerEvent('', 'reset', '');
         FlxTween.tween(game, {defaultCamZoom: 0.5}, 1.437, {ease: FlxEase.cubeInOut});
     }
     else {
@@ -57,14 +79,24 @@ function onEvent(ev,v1,v2) {
                     centerCamera();
                 }
             case 'fly': 
-                if (v2 == 'true') {
-                    goIntoTheAir(true);
+                if (v2 == '1') {
+                    goIntoTheAir(1);
+                }
+                if (v2 == '2') {
+                    goIntoTheAir(2);
                 }
                 else {
-                    goIntoTheAir(false);
+                    goIntoTheAir(0);
                 }
             case 'reset':
                 triggerEvent('Camera Follow Pos', '', '');
+            case 'turn off':
+                if (v2 == 'true') {
+                    camGame.visible = true;
+                }
+                else {
+                    camGame.visible = false;
+                }
         }
     }
 }

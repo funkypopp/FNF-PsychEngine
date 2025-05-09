@@ -1,0 +1,11 @@
+Brings up a pop-up that displays credits for the song.
+
+Value 1: The song's name.
+Value 2: The credited people associated.
+(Separated by commas, up to 5 lines)
+Format:
+[Music - X    ]
+[X               ]
+[Coding - X  ]
+[X               ]
+[Charting - X]

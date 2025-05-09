@@ -1,0 +1,4 @@
+Focuses the camera on your selected target.
+
+Value 1: Target (plr, opp, center)
+Value 2: Duration, Ease, Lock (true/false)

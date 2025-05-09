@@ -1,55 +1,55 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
+			"offsets": [25, 30],
 			"loop": false,
-			"offsets": [0, 0],
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "left",
-			"indices": []
+			"indices": [],
+			"name": "left"
 		},
 		{
+			"offsets": [12, 7],
 			"loop": false,
-			"offsets": [0, 0],
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
+			"indices": [],
+			"name": "down"
 		},
 		{
+			"offsets": [0, 91],
 			"loop": false,
-			"offsets": [0, 0],
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "up",
-			"indices": []
+			"indices": [],
+			"name": "up"
 		},
 		{
+			"offsets": [0, 7],
 			"loop": false,
-			"offsets": [0, 0],
-			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/Ball_Man",
-	"position": [-100, 260],
+	"position": [115, 427],
 	"healthicon": "buddy",
 	"flip_x": false,
 	"healthbar_colors": [135, 149, 135],
-	"camera_position": [50, 50],
-	"sing_duration": 4,
-	"scale": 1,
+	"camera_position": [-40, -70],
+	"sing_duration": 8,
+	"scale": 1.5,
 	"_editor_isPlayer": false
 }

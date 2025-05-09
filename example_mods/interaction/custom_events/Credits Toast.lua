@@ -1,28 +1,8 @@
-creditsToggle = getModSetting('creditsToggle')
-creditsStyle = getModSetting('creditsStyle')
+creditsToggle = true
+creditsStyle = 'Cassette'
 
 local creditsList = {
-    {song = 'Babybatter', style = 'Vinyl', art = 'babybatter'},
-    {song = 'Tutorial (FTT)', style = 'Vinyl', art = 'gf'},
-    {song = 'Bopeebo (FTT)', style = 'Vinyl', art = 'dd'},
-    {song = 'Fresh (FTT)', style = 'Vinyl', art = 'dd'},
-    {song = 'Dadbattle (FTT)', style = 'Vinyl', art = 'dd'},
-    {song = 'Im Scary Guye', style = 'Vinyl', art = 'imscaryguye'},
-    {song = 'Spookeez (FTT)', style = 'Vinyl', art = 'spooky'},
-    {song = 'South (FTT)', style = 'Vinyl', art = 'spooky'},
-    {song = 'Monster (FTT)', style = 'Vinyl', art = 'monster'},
-    {song = 'BeRzErKeR', style = 'Vinyl', art = 'berzerker'},
-    {song = 'Pico (FTT)', style = 'Vinyl', art = 'pico'},
-    {song = 'Philly Nice (FTT)', style = 'Vinyl', art = 'pico'},
-    {song = 'Blammed (FTT)', style = 'Vinyl', art = 'pico'},
-    {song = 'Soundcheck', style = 'Vinyl', art = 'soundcheck'},
-    {song = 'Satin Panties (FTT)', style = 'Vinyl', art = 'mm'},
-    {song = 'High (FTT)', style = 'Custom', art = 'mm'},
-    {song = 'Milf (FTT)', style = 'Cassette', art = 'mm'},
-    {song = 'Heights & Frights', style = 'Cassette', art = 'heightsfrights'},
-    {song = 'Cocoa (FTT)', style = 'Cassette', art = 'christmas'},
-    {song = 'Eggnog (FTT)', style = 'Cassette', art = 'christmas'},
-    {song = 'Winter Horrorland (FTT)', style = 'Cassette', art = 'monster'},
+    {song = 'Interaction', style = 'Cassette', art = 'debug'}
 }
 
 local creditsArt = 'debug'
@@ -142,31 +122,8 @@ function onEvent(eventName, value1, value2)
             end
             setTextString('songTitle', value1)
             setTextAlignment('songTitle', 'center')
-            if songName == 'Im Scary Guye' then
-                if creditsStyle == 'Vinyl' then
-                    scaleObject('creditsContainer', 0.85, 0.9)
-                end
-                setTextString('creditTxt', 'Music - Nocticola,\nawaffleswag, Aleon\nLyricist & Vocalist - SkyanUltra\nBackup Singer - Daylight\n\nCoding - SkyanUltra\n\nChart - Grimlock495,\nSkyanUltra')
-                screenCenter('creditTxt', 'y')
-                setProperty('creditTxt.y', getProperty('creditTxt.y') + 40)
-            elseif songName == 'BeRzErKeR' then
-                setTextString('creditTxt', 'Music - Vaderlings, Nocticola\nfunkypop, Rareblin\n\nCoding - SkyanUltra\n\nChart - SkyanUltra')
-                screenCenter('creditTxt', 'y')
-            elseif songName == 'Soundcheck' then
-                setTextString('creditTxt', 'Music - awaffleswag, funkypop, Vaderlings, Samuel\n\nCoding - Daylight, SkyanUltra\n\nChart - Grimlock495')
-                screenCenter('creditTxt', 'y')
-                setProperty('creditTxt.y', getProperty('creditTxt.y') + 20)
-            elseif songName == 'Heights & Frights' then
-                if creditsStyle == 'Vinyl' then
-                    scaleObject('creditsContainer', 0.85, 0.9)
-                end
-                setTextString('creditTxt', 'Music - funkypop,\nVaderlings, Aleon\nLyricist - SkyanUltra\nVocals - Grimlock495,\nSkyanUltra\n\nCoding - SkyanUltra\n\nChart - SkyanUltra')
-                screenCenter('creditTxt', 'y')
-                setProperty('creditTxt.y', getProperty('creditTxt.y') + 40)
-            else
-                setTextString('creditTxt', 'Music - '..line1..comma1..'\n'..line2..'\n\nCoding - '..line3..comma2..'\n'..line4..'\n\nChart - '..line5..'')
-                screenCenter('creditTxt', 'y')
-            end
+            setTextString('creditTxt', 'Music - '..line1..comma1..'\n'..line2..'\n\nCoding - '..line3..comma2..'\n'..line4..'\n\nChart - '..line5..'')
+            screenCenter('creditTxt', 'y')
             if creditsStyle == 'Vinyl' then
                 doTweenX('boxEnter', 'creditsContainer', 125, 1, 'circOut')
                 doTweenX('titleEnter', 'songTitle', 175, 1, 'circOut')
