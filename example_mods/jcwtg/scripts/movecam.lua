@@ -92,57 +92,21 @@ function onTimerCompleted(tag, loops, loopsLeft)
 end
 end
 
+function onEvent(event, value1, value2, strumTime)
+	if event == 'Camera Follow Pos' then
+		if value1 == '' then
+			camlock = false
+			camon = true
+		else 
+			camlock = true
+			camon = false
+		end
+	end
+end
+
 function onUpdate()
 	if camlock and camon == true then
 		setProperty('camFollow.x', camlockx)
 		setProperty('camFollow.y', camlocky)
-	end
-end
-
-function onStepHit()
-	if songName == 'locked' then
-		if curStep == 290 then
-			camon = true
-			camlock = false
-		end
-		if curStep == 831 then
-			camon = false
-			camlock = true
-		end
-	end
-end
-
-function onBeatHit()
-	if songName == 'locked' then
-		if curBeat >= 0  and curBeat <= 15 then
-			camon = false
-			camlock = true
-		end
-		if curBeat == 15 then
-			camon = true
-			camlock = false
-		end
-		if curBeat == 47 then
-			camon = false
-			camlock = true
-		end
-		if curBeat == 63 then
-			camlock = false
-		end
-		if curBeat == 64 then
-			camlock = true
-		end
-		if curBeat == 76 then
-			camon = false
-			camlock = true
-		end
-		if curBeat == 175 then
-			camon = true
-			camlock = false
-		end 
-		if curBeat == 212 then
-			camon = true
-			camlock = false
-		end
 	end
 end

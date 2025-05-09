@@ -1,0 +1,21 @@
+{
+	"directory": "",
+	"defaultZoom": 0.5,
+	"stageUI": "",
+
+	"boyfriend": [1475, 75],
+	"girlfriend": [350, 25],
+	"opponent": [-510, 75],
+	"hide_girlfriend": false,
+
+	"camera_boyfriend": [-200, -50],
+	"camera_opponent": [400, -100],
+	"camera_girlfriend": [0, 0],
+	"camera_speed": 1,
+
+	"preload": {
+		"images/castlebg/mainbg": 3,
+		"images/castlebg/add": 3,
+		"images/castlebg/sky": 3
+	}
+}

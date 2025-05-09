@@ -31,6 +31,7 @@ import substates.GameOverSubstate;
 
 #if !flash
 import openfl.filters.ShaderFilter;
+import shaders.DropShadowShader;
 #end
 
 import shaders.ErrorHandledShader;
@@ -90,7 +91,7 @@ class PlayState extends MusicBeatState
 	];
 
 	//event variables
-	private var isCameraOnForcedPos:Bool = false;
+	public var isCameraOnForcedPos:Bool = false;
 
 	public var boyfriendMap:Map<String, Character> = new Map<String, Character>();
 	public var dadMap:Map<String, Character> = new Map<String, Character>();
@@ -266,6 +267,11 @@ class PlayState extends MusicBeatState
 
 	private static var _lastLoadedModDirectory:String = '';
 	public static var nextReloadAll:Bool = false;
+
+	public static var imGonnaKillMyself:DropShadowShader = new DropShadowShader();
+	var rim:DropShadowShader;
+	var rim2:DropShadowShader;
+	var rim3:DropShadowShader;
 	override public function create()
 	{
 		//trace('Playback Rate: ' + playbackRate);
@@ -427,6 +433,30 @@ class PlayState extends MusicBeatState
 			add(gfGroup);
 			add(dadGroup);
 			add(boyfriendGroup);
+		}
+
+		if (curStage == 'castle') {
+			rim = new DropShadowShader();
+			rim.setAdjustColor(-35, -10, 0, -10);
+			rim.color = 0xf7ceff;
+			boyfriend.shader = rim;
+			rim.attachedSprite = boyfriend;
+			rim.angle = 145;
+			rim.threshold = 0.2;
+			rim2 = new DropShadowShader();
+			rim2.setAdjustColor(-35, -10, 0, -10);
+			rim2.color = 0xf7ceff;
+			dad.shader = rim2;
+			rim2.attachedSprite = dad;
+			rim2.angle = 45;
+			rim2.threshold = 0.2;
+			rim3 = new DropShadowShader();
+			rim3.setAdjustColor(-35, -10, 0, -10);
+			rim3.color = 0xf7ceff;
+			gf.shader = rim3;
+			rim3.attachedSprite = gf;
+			rim3.angle = 90;
+			rim3.threshold = 0.2;
 		}
 		
 		#if (LUA_ALLOWED || HSCRIPT_ALLOWED)
@@ -1688,6 +1718,14 @@ class PlayState extends MusicBeatState
 		callOnScripts('onUpdate', [elapsed]);
 
 		super.update(elapsed);
+
+		if (curStage == 'castle') {
+			rim.updateFrameInfo(boyfriend.frame);
+			rim2.updateFrameInfo(dad.frame);
+			rim3.updateFrameInfo(gf.frame);
+			if (boyfriend.getAnimationName().startsWith('sing') && boyfriend.isAnimationFinished()) rim.updateFrameInfo(boyfriend.frame);
+			if (boyfriend.getAnimationName().startsWith('id')) rim.updateFrameInfo(boyfriend.frame);
+		}
 
 		setOnScripts('curDecStep', curDecStep);
 		setOnScripts('curDecBeat', curDecBeat);
@@ -2999,6 +3037,7 @@ class PlayState extends MusicBeatState
 				var canPlay:Bool = true;
 				if(note.isSustainNote)
 				{
+					if (curStage == 'castle') rim2.updateFrameInfo(dad.frame);
 					var holdAnim:String = animToPlay + '-hold';
 					if(char.animation.exists(holdAnim)) animToPlay = holdAnim;
 					if(char.getAnimationName() == holdAnim || char.getAnimationName() == holdAnim + '-loop') canPlay = false;
@@ -3018,6 +3057,7 @@ class PlayState extends MusicBeatState
 		if(result != LuaUtils.Function_Stop && result != LuaUtils.Function_StopHScript && result != LuaUtils.Function_StopAll) callOnHScript('opponentNoteHit', [note]);
 
 		if (!note.isSustainNote) invalidateNote(note);
+		if (curStage == 'castle') rim2.updateFrameInfo(dad.frame);
 	}
 
 	public function goodNoteHit(note:Note):Void
@@ -3058,6 +3098,7 @@ class PlayState extends MusicBeatState
 					var canPlay:Bool = true;
 					if(note.isSustainNote)
 					{
+						if (curStage == 'castle') rim.updateFrameInfo(boyfriend.frame);
 						var holdAnim:String = animToPlay + '-hold';
 						if(char.animation.exists(holdAnim)) animToPlay = holdAnim;
 						if(char.getAnimationName() == holdAnim || char.getAnimationName() == holdAnim + '-loop') canPlay = false;
@@ -3095,6 +3136,7 @@ class PlayState extends MusicBeatState
 			var gainHealth:Bool = true; // prevent health gain, *if* sustains are treated as a singular note
 			if (guitarHeroSustains && note.isSustainNote) gainHealth = false;
 			if (gainHealth) health += note.hitHealth * healthGain;
+			if (curStage == 'castle') rim.updateFrameInfo(boyfriend.frame);
 
 		}
 		else //Notes that count as a miss if you hit them (Hurt notes for example)
@@ -3114,6 +3156,7 @@ class PlayState extends MusicBeatState
 
 			noteMiss(note);
 			if(!note.noteSplashData.disabled && !note.isSustainNote) spawnNoteSplashOnNote(note);
+			if (curStage == 'castle') rim.updateFrameInfo(boyfriend.frame);
 		}
 
 		stagesFunc(function(stage:BaseStage) stage.goodNoteHit(note));
@@ -3241,8 +3284,10 @@ class PlayState extends MusicBeatState
 	{
 		if (gf != null && beat % Math.round(gfSpeed * gf.danceEveryNumBeats) == 0 && !gf.getAnimationName().startsWith('sing') && !gf.stunned)
 			gf.dance();
-		if (boyfriend != null && beat % boyfriend.danceEveryNumBeats == 0 && !boyfriend.getAnimationName().startsWith('sing') && !boyfriend.stunned)
+		if (boyfriend != null && beat % boyfriend.danceEveryNumBeats == 0 && !boyfriend.getAnimationName().startsWith('sing') && !boyfriend.stunned){
 			boyfriend.dance();
+			if (curStage == 'castle') rim.updateFrameInfo(boyfriend.frame);
+		}
 		if (dad != null && beat % dad.danceEveryNumBeats == 0 && !dad.getAnimationName().startsWith('sing') && !dad.stunned)
 			dad.dance();
 	}
@@ -3252,6 +3297,7 @@ class PlayState extends MusicBeatState
 		var anim:String = boyfriend.getAnimationName();
 		if(boyfriend.holdTimer > Conductor.stepCrochet * (0.0011 #if FLX_PITCH / FlxG.sound.music.pitch #end) * boyfriend.singDuration && anim.startsWith('sing') && !anim.endsWith('miss'))
 			boyfriend.dance();
+		if (curStage == 'castle') rim.updateFrameInfo(boyfriend.frame);
 	}
 
 	override function sectionHit()

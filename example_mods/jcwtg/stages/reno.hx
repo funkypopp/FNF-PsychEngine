@@ -3,6 +3,7 @@ import states.PlayState;
 var reno:FlxSprite;
 var gummy:FlxSprite;
 var stupid = game.createRuntimeShader("ripplw");
+var stupid2 = game.createRuntimeShader("fun");
 var midX = FlxG.width / 2;
 var midY = (FlxG.height / 2) + 200;
 function onCreate() {
@@ -33,6 +34,8 @@ function centerCamera(?poop:Float) {
 }
 
 function onCreatePost() {
+    // stupid2.setFloat('u_mix', 0.01);
+    // game.camGame.filters = ([new ShaderFilter(stupid2)]);
     if (game.curSong == 'locked') {
         centerCamera();
         game.boyfriendGroup.visible = false;
@@ -53,4 +56,5 @@ function onBeatHit() {
 
 function onUpdate(e) {
     stupid.setFloat('iTime', Conductor.songPosition / 1600);
+    stupid2.setFloat('iTime', Conductor.songPosition / 1600);
 }
