@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dead pixel shizzz.png">
+	<!-- Created with Adobe Animate version 24.0.9.73 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="title text0000" x="1" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0001" x="1" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0002" x="1" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0003" x="1" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0004" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0005" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0006" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0007" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0008" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0009" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0010" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0011" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0012" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0013" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0014" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0015" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0016" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0017" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0018" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0019" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0020" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0021" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0022" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0023" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0024" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0025" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0026" x="1" y="447" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0027" x="1" y="447" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0028" x="1" y="447" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0029" x="1" y="447" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0030" x="873" y="447" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0031" x="873" y="447" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0032" x="873" y="447" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0033" x="873" y="447" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0034" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0035" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0036" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0037" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0038" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0039" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0040" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0041" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0042" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0043" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0044" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0045" x="1" y="893" width="879" height="409"/>
+	<SubTexture name="title text0046" x="1" y="893" width="879" height="409"/>
+	<SubTexture name="title text0047" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0048" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0049" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0050" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0051" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0052" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0053" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0054" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0055" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0056" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0057" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0058" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+	<SubTexture name="title text0059" x="873" y="1" width="835" height="409" frameX="0" frameY="0" frameWidth="879" frameHeight="409"/>
+</TextureAtlas>
