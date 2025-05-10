@@ -29,19 +29,7 @@ function spawnStupid() {
 }
 
 function goodNoteHit(note) {
-    if (!game.curSong == 'Pixel Galaxy') {
-        if (!note.isSustainNote) {
-            spawnStupid();
-        } 
-        var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[note.noteData];
-        switch (Math.abs(note.noteData)) {
-            case 0: whateverShader.set_r(arr[0]);
-            case 1: whateverShader.set_r(arr[0]);
-            case 2: whateverShader.set_r(arr[0]);
-            case 3: whateverShader.set_r(arr[0]);
-        }
-    }
-    else if(game.curSong == 'Pixel Galaxy' && curBeat >= 32) {
+    if (game.curSong == 'Pixel Galaxy' && curBeat >= 32) {
         if (!note.isSustainNote) {
             spawnStupid();
         } 
@@ -52,6 +40,18 @@ function goodNoteHit(note) {
             case 2: whateverShader.set_r(arr[0]);
             case 3: whateverShader.set_r(arr[0]);
         }  
+    }
+    else if (!game.curSong == 'Pixel Galaxy') {
+        if (!note.isSustainNote) {
+            spawnStupid();
+        } 
+        var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[note.noteData];
+        switch (Math.abs(note.noteData)) {
+            case 0: whateverShader.set_r(arr[0]);
+            case 1: whateverShader.set_r(arr[0]);
+            case 2: whateverShader.set_r(arr[0]);
+            case 3: whateverShader.set_r(arr[0]);
+        }
     }
 
 }

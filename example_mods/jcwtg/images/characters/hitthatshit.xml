@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="hitthatshit.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="hitthatshit0000" x="10" y="10" width="325" height="566" pivotX="0" pivotY="0"/>
+	<SubTexture name="hitthatshit0001" x="345" y="10" width="325" height="566"/>
+	<SubTexture name="hitthatshit0002" x="680" y="10" width="325" height="566"/>
+	<SubTexture name="hitthatshit0003" x="1015" y="10" width="325" height="566"/>
+	<SubTexture name="hitthatshit0004" x="1350" y="10" width="325" height="566"/>
+	<SubTexture name="hitthatshit0005" x="1685" y="10" width="325" height="566"/>
+	<SubTexture name="hitthatshit0006" x="10" y="586" width="325" height="566"/>
+	<SubTexture name="hitthatshit0007" x="345" y="586" width="325" height="566"/>
+	<SubTexture name="hitthatshit0008" x="680" y="586" width="325" height="566"/>
+</TextureAtlas>

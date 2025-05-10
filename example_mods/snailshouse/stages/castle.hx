@@ -1,31 +1,6 @@
 import psychlua.LuaUtils;
 import states.PlayState;
 
-function centerCamera(?poop:Float) {
-    var midX = FlxG.width / 2;
-    var midY = (FlxG.height / 2) + 200;
-    if (poop != null) {
-        triggerEvent('Camera Follow Pos', midX, midY - poop);
-    }
-    else 
-    {
-        triggerEvent('Camera Follow Pos', midX, midY);
-    }
-}
-
-// todo fix shader thing
-
-function goIntoTheAir(reverse:Bool) {
-    if (reverse) {
-        centerCamera(200);
-        game.defaultCamZoom = 0.5;
-    }
-    else {
-        centerCamera(600);
-        game.defaultCamZoom = 0.3;
-    }
-}
-
 function onCreate() {
     game.gfGroup.scrollFactor.set(1, 1);
 
