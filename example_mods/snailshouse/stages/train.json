@@ -14,6 +14,8 @@
 	"camera_speed": 1,
 
 	"preload": {
-		"images/trainbg/train": 3
+		"images/trainbg/train": 3,
+		"images/trainbg/train2": 3,
+		"images/trainbg/sky": 3
 	}
 }

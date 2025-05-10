@@ -45,10 +45,10 @@ function onCreatePost() {
 
 function onBeatHit() {
     if (game.curSong == 'locked') {
-        if (curBeat == 0) {
+        if (curBeat == 143) {
             FlxTween.tween(gummy, {alpha: 1}, 0.8, {ease: FlxEase.cubeIn});
         }
-        if (curBeat == 16) {
+        if (curBeat == 176) {
             FlxTween.tween(gummy, {alpha: 0}, 1.5, {ease: FlxEase.cubeOut});
         }
     }

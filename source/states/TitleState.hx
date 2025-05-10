@@ -133,10 +133,10 @@ class TitleState extends MusicBeatState
 
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logoBl.animation.play('bump');
-		logoBl.screenCenter();
 		logoBl.updateHitbox();
 
 		gfDance = new FlxSprite(gfPosition.x, gfPosition.y);
+		gfDance.x += 350;
 		gfDance.antialiasing = ClientPrefs.data.antialiasing;
 		
 		if(ClientPrefs.data.shaders)
@@ -146,18 +146,9 @@ class TitleState extends MusicBeatState
 			logoBl.shader = swagShader.shader;
 		}
 		
-		gfDance.frames = Paths.getSparrowAtlas(characterImage);
-		if(!useIdle)
-		{
-			gfDance.animation.addByIndices('danceLeft', animationName, danceLeftFrames, "", 24, false);
-			gfDance.animation.addByIndices('danceRight', animationName, danceRightFrames, "", 24, false);
-			gfDance.animation.play('danceRight');
-		}
-		else
-		{
-			gfDance.animation.addByPrefix('idle', animationName, 24, false);
-			gfDance.animation.play('idle');
-		}
+		gfDance.frames = Paths.getSparrowAtlas('hitthatshit');
+		gfDance.animation.addByPrefix('idle', 'hitthatshit', 12, true);
+		gfDance.animation.play('idle');
 
 
 		var animFrames:Array<FlxFrame> = [];
@@ -199,6 +190,7 @@ class TitleState extends MusicBeatState
 		ngSpr.antialiasing = ClientPrefs.data.antialiasing;
 
 		add(logoBl); //FNF Logo
+		add(gfDance); //GF Dance Title
 		add(titleText); //"Press Enter to Begin" text
 		add(credGroup);
 		add(ngSpr);
@@ -503,19 +495,6 @@ class TitleState extends MusicBeatState
 
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);
-
-		if(gfDance != null)
-		{
-			danceLeft = !danceLeft;
-			if(!useIdle)
-			{
-				if (danceLeft)
-					gfDance.animation.play('danceRight');
-				else
-					gfDance.animation.play('danceLeft');
-			}
-			else if(curBeat % 2 == 0) gfDance.animation.play('idle', true);
-		}
 
 		if(!closedState)
 		{
