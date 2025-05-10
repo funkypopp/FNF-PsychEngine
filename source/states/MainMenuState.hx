@@ -297,8 +297,13 @@ class MainMenuState extends MusicBeatState
 						case 'story_mode':
 							MusicBeatState.switchState(new StoryMenuState());
 						case 'freeplay':
-							MusicBeatState.switchState(new FreeplayState());
-
+							if (!ClientPrefs.data.playedAlready) {
+								MusicBeatState.switchState(new FakeFreeplayState());
+								ClientPrefs.data.playedAlready = true;
+							}
+							else {
+								MusicBeatState.switchState(new FreeplayState());
+							}
 						#if MODS_ALLOWED
 						case 'mods':
 							MusicBeatState.switchState(new ModsMenuState());

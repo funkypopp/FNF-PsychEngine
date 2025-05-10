@@ -40,7 +40,7 @@ class FuckNaurState extends MusicBeatState {
     override public function create() {
         if (FlxG.sound.music != null)
             FlxG.sound.music.stop();
-        // MusicBeatState.switchState(new FunGameState());
+        
         super.create();
         
         startVideo('mycosissss', false, false, false, true);

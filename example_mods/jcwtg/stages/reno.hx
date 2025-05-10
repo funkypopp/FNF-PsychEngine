@@ -34,8 +34,6 @@ function centerCamera(?poop:Float) {
 }
 
 function onCreatePost() {
-    // stupid2.setFloat('u_mix', 0.01);
-    // game.camGame.filters = ([new ShaderFilter(stupid2)]);
     if (game.curSong == 'locked') {
         centerCamera();
         game.boyfriendGroup.visible = false;
