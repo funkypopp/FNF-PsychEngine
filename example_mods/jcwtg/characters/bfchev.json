@@ -1,44 +1,44 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [0, 0],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "i"
+			"fps": 24,
+			"name": "i",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [57, -20],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "l"
+			"fps": 24,
+			"name": "l",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [49, -47],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "d"
+			"fps": 24,
+			"name": "d",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [-48, 11],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "u"
+			"fps": 24,
+			"name": "u",
+			"indices": []
 		},
 		{
-			"offsets": [-88, -7],
-			"indices": [],
-			"fps": 24,
-			"anim": "singRIGHT",
 			"loop": false,
-			"name": "r"
+			"offsets": [-88, -7],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "r",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
@@ -47,8 +47,8 @@
 	"position": [-60, 80],
 	"healthicon": "bfchev",
 	"flip_x": true,
-	"healthbar_colors": [161, 161, 161],
-	"camera_position": [0, 0],
+	"healthbar_colors": [102, 204, 255],
+	"camera_position": [110, 70],
 	"sing_duration": 4,
 	"scale": 1,
 	"_editor_isPlayer": true

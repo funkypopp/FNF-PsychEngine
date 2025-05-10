@@ -122,11 +122,19 @@
 		},
 		{
 			"offsets": [-5, 0],
-			"indices": [13],
+			"loop": true,
 			"fps": 24,
 			"anim": "stand",
-			"loop": true,
+			"indices": [13],
 			"name": "BF idle dance"
+		},
+		{
+			"loop": true,
+			"offsets": [-7, 0],
+			"anim": "idle-oh",
+			"fps": 24,
+			"name": "BF scaryscare",
+			"indices": []
 		}
 	],
 	"vocals_file": "",

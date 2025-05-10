@@ -14,7 +14,7 @@
 	"camera_speed": 1,
 
 	"preload": {
-		"images/cys": 1
+		"images/transform": 1
 	},
 
 	"_editorMeta": {

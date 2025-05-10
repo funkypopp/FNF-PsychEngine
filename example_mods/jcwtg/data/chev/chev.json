@@ -1,5 +1,5 @@
 {
-	"player1": "bf",
+	"player1": "bfchev",
 	"gfVersion": "gf",
 	"notes": [
 		{
@@ -1430,11 +1430,11 @@
 		}
 	],
 	"events": [],
-	"player2": "grimlock",
+	"player2": "chev",
 	"offset": 0,
 	"song": "Chev",
 	"needsVoices": true,
-	"stage": "reno",
+	"stage": "chev",
 	"bpm": 160.46,
 	"speed": 2.7,
 	"format": "psych_v1"
