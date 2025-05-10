@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="vader.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="vader_down0000" x="10" y="10" width="376" height="474" pivotX="-23.15" pivotY="-49.95" frameX="0" frameY="-10" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0001" x="10" y="10" width="376" height="474" frameX="0" frameY="-10" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0002" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0003" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0004" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0005" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0006" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0007" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0008" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0009" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0010" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0011" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0012" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0013" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_down0014" x="396" y="10" width="357" height="485" frameX="-14" frameY="0" frameWidth="376" frameHeight="485"/>
+	<SubTexture name="vader_idle0000" x="763" y="10" width="377" height="538" pivotX="0" pivotY="0" frameX="-3" frameY="-4" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0001" x="763" y="10" width="377" height="538" frameX="-3" frameY="-4" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0002" x="1150" y="10" width="378" height="538" frameX="-1" frameY="-4" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0003" x="1150" y="10" width="378" height="538" frameX="-1" frameY="-4" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0004" x="1538" y="10" width="379" height="540" frameX="0" frameY="-2" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0005" x="1538" y="10" width="379" height="540" frameX="0" frameY="-2" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0006" x="10" y="560" width="379" height="542" frameX="0" frameY="0" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0007" x="10" y="560" width="379" height="542" frameX="0" frameY="0" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0008" x="10" y="560" width="379" height="542" frameX="0" frameY="0" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0009" x="10" y="560" width="379" height="542" frameX="0" frameY="0" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0010" x="10" y="560" width="379" height="542" frameX="0" frameY="0" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0011" x="10" y="560" width="379" height="542" frameX="0" frameY="0" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0012" x="10" y="560" width="379" height="542" frameX="0" frameY="0" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0013" x="10" y="560" width="379" height="542" frameX="0" frameY="0" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_idle0014" x="10" y="560" width="379" height="542" frameX="0" frameY="0" frameWidth="380" frameHeight="542"/>
+	<SubTexture name="vader_left0000" x="399" y="560" width="445" height="528" pivotX="71.15" pivotY="-14.05"/>
+	<SubTexture name="vader_left0001" x="399" y="560" width="445" height="528"/>
+	<SubTexture name="vader_left0002" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_left0003" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_left0004" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_left0005" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_left0006" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_left0007" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_left0008" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_left0009" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_left0010" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_left0011" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_left0012" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_left0013" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_left0014" x="854" y="560" width="431" height="528" frameX="-14" frameY="0" frameWidth="445" frameHeight="528"/>
+	<SubTexture name="vader_right0000" x="1295" y="560" width="410" height="518" pivotX="-94.45" pivotY="-14" frameX="-3" frameY="-8" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0001" x="1295" y="560" width="410" height="518" frameX="-3" frameY="-8" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0002" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0003" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0004" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0005" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0006" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0007" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0008" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0009" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0010" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0011" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0012" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0013" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_right0014" x="10" y="1112" width="385" height="526" frameX="0" frameY="0" frameWidth="413" frameHeight="526"/>
+	<SubTexture name="vader_up0000" x="405" y="1112" width="353" height="590" pivotX="-7.85" pivotY="52.8" frameX="-1" frameY="0" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0001" x="405" y="1112" width="353" height="590" frameX="-1" frameY="0" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0002" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0003" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0004" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0005" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0006" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0007" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0008" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0009" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0010" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0011" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0012" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0013" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+	<SubTexture name="vader_up0014" x="768" y="1112" width="354" height="585" frameX="0" frameY="-5" frameWidth="354" frameHeight="590"/>
+</TextureAtlas>
