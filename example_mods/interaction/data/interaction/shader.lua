@@ -8,7 +8,7 @@ end
 function onCreatePost()
 	initLuaShader('bloom')
 
-	makeLuaSprite('Bloom', 1.9, 0)
+	makeLuaSprite('Bloom', 1.9, 3)
 	makeGraphic('Bloom', 1, 1)
 	setSpriteShader('Bloom', 'bloom')
 	setShaderFloat("Bloom", "u_Amount", 1.9)
@@ -16,13 +16,32 @@ function onCreatePost()
 end
 
 function bam(dur, ease)
-	setProperty('Bloom.x', 1.7)
-	setProperty('Bloom.y', 40)
-	startTween('tween_Bloom', 'Bloom',{x = 2, y = 3}, dur,{ease = ease, onUpdate = 'tweenNum1'})
+
 end
-function tweenNum1()
-	setShaderFloat("Bloom", "u_Amount", getProperty('Bloom.x'))
-	setShaderFloat("Bloom", "u_Size", getProperty('Bloom.y'))
+
+function onEvent(n, v1, v2)
+	if n == "bump" then
+		if v1 == '' or v1 == nil then v1 = 3 end
+		if v2 == '' or v2 == nil then v2 = 0 end
+		setProperty('Bloom.x', 1.6)
+		setProperty('Bloom.y', 40)
+		startTween('tween_Bloom', 'Bloom', {x = 1.9, y = 3}, (curBpm/60)/v1, {ease = 'expoOut'})
+		cancelTween('dimBgTween')
+		if v2 == '1' then
+			setProperty('dimBg.color', getColorFromHex('440033'))
+            doTweenColor('dimBgTween', 'dimBg', '000000', (curBpm/60)/v1, 'circOut')
+		elseif v2 == '2' then
+			setProperty('dimBg.color', getColorFromHex('ff0066'))
+            doTweenColor('dimBgTween', 'dimBg', '440033', (curBpm/60)/v1, 'circOut')
+		end
+	end
+end
+
+function onUpdate()
+	if shaderStage == 1 then
+		setShaderFloat("Bloom", "u_Amount", getProperty('Bloom.x'))
+		setShaderFloat("Bloom", "u_Size", getProperty('Bloom.y'))
+	end
 end
 
 function onBeatHit()

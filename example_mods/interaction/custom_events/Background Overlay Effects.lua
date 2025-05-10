@@ -36,6 +36,7 @@ function initializeBGFX()
     setProperty('dimBg.camera', instanceArg('camGame'), false, true)
     setScrollFactor('dimBg', 0, 0)
     setProperty('dimBg.alpha', 0)
+    setBlendMode('dimBg', 'add')
     setObjectOrder('dimBg', getObjectOrder('gfGroup')-1)
     addInstance('dimBg', false)
     initialized = true

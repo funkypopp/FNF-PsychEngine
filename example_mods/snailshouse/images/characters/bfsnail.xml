@@ -2,9 +2,23 @@
 <!--
 Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
 -->
-<TextureAtlas imagePath="bfsnail.png" width="2655" height="2883">
-	<SubTexture name="down0001" x="401" y="2335" width="397" height="546" frameX="-0" frameY="-1" frameWidth="397" frameHeight="547"/>
-	<SubTexture name="down0002" x="401" y="2335" width="397" height="546" frameX="-0" frameY="-1" frameWidth="397" frameHeight="547"/>
+<TextureAtlas imagePath="bfsnail.png" width="2655" height="2891">
+	<SubTexture name="ass0001" x="1" y="2335" width="348" height="555" frameX="-0" frameY="-10" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0002" x="1" y="2335" width="348" height="555" frameX="-0" frameY="-10" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0003" x="1" y="601" width="337" height="565" frameX="-5" frameY="-0" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0004" x="1" y="601" width="337" height="565" frameX="-5" frameY="-0" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0005" x="1" y="601" width="337" height="565" frameX="-5" frameY="-0" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0006" x="1" y="601" width="337" height="565" frameX="-5" frameY="-0" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0007" x="1" y="601" width="337" height="565" frameX="-5" frameY="-0" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0008" x="1" y="601" width="337" height="565" frameX="-5" frameY="-0" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0009" x="1" y="601" width="337" height="565" frameX="-5" frameY="-0" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0010" x="1" y="601" width="337" height="565" frameX="-5" frameY="-0" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0011" x="1" y="601" width="337" height="565" frameX="-5" frameY="-0" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0012" x="1" y="601" width="337" height="565" frameX="-5" frameY="-0" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0013" x="1" y="601" width="337" height="565" frameX="-5" frameY="-0" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="ass0014" x="1" y="601" width="337" height="565" frameX="-5" frameY="-0" frameWidth="348" frameHeight="565"/>
+	<SubTexture name="down0001" x="752" y="2334" width="397" height="546" frameX="-0" frameY="-1" frameWidth="397" frameHeight="547"/>
+	<SubTexture name="down0002" x="752" y="2334" width="397" height="546" frameX="-0" frameY="-1" frameWidth="397" frameHeight="547"/>
 	<SubTexture name="down0003" x="2253" y="2277" width="396" height="547" frameX="-0" frameY="-0" frameWidth="397" frameHeight="547"/>
 	<SubTexture name="down0004" x="2253" y="2277" width="396" height="547" frameX="-0" frameY="-0" frameWidth="397" frameHeight="547"/>
 	<SubTexture name="down0005" x="2253" y="2277" width="396" height="547" frameX="-0" frameY="-0" frameWidth="397" frameHeight="547"/>
@@ -59,19 +73,19 @@ Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
 	<SubTexture name="left0012" x="1210" y="1722" width="395" height="568" frameX="-9" frameY="-0" frameWidth="404" frameHeight="568"/>
 	<SubTexture name="left0013" x="1210" y="1722" width="395" height="568" frameX="-9" frameY="-0" frameWidth="404" frameHeight="568"/>
 	<SubTexture name="left0014" x="1210" y="1722" width="395" height="568" frameX="-9" frameY="-0" frameWidth="404" frameHeight="568"/>
-	<SubTexture name="missdown0001" x="801" y="2334" width="398" height="546" frameX="-4" frameY="-1" frameWidth="405" frameHeight="547"/>
-	<SubTexture name="missdown0002" x="1202" y="2323" width="405" height="530" frameX="-0" frameY="-16" frameWidth="405" frameHeight="547"/>
-	<SubTexture name="missdown0003" x="1202" y="2323" width="405" height="530" frameX="-0" frameY="-16" frameWidth="405" frameHeight="547"/>
-	<SubTexture name="missdown0004" x="1" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
-	<SubTexture name="missdown0005" x="1" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
-	<SubTexture name="missdown0006" x="1" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
-	<SubTexture name="missdown0007" x="1" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
-	<SubTexture name="missdown0008" x="1" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
-	<SubTexture name="missdown0009" x="1" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
-	<SubTexture name="missdown0010" x="1" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
-	<SubTexture name="missdown0011" x="1" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
-	<SubTexture name="missdown0012" x="1" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
-	<SubTexture name="missdown0013" x="1" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0001" x="1152" y="2323" width="398" height="546" frameX="-4" frameY="-1" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0002" x="1553" y="2293" width="405" height="530" frameX="-0" frameY="-16" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0003" x="1553" y="2293" width="405" height="530" frameX="-0" frameY="-16" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0004" x="352" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0005" x="352" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0006" x="352" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0007" x="352" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0008" x="352" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0009" x="352" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0010" x="352" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0011" x="352" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0012" x="352" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
+	<SubTexture name="missdown0013" x="352" y="2335" width="397" height="547" frameX="-4" frameY="-0" frameWidth="405" frameHeight="547"/>
 	<SubTexture name="missleft0001" x="1" y="1763" width="403" height="569" frameX="-0" frameY="-0" frameWidth="404" frameHeight="570"/>
 	<SubTexture name="missleft0002" x="1475" y="1" width="390" height="570" frameX="-7" frameY="-0" frameWidth="404" frameHeight="570"/>
 	<SubTexture name="missleft0003" x="1475" y="1" width="390" height="570" frameX="-7" frameY="-0" frameWidth="404" frameHeight="570"/>

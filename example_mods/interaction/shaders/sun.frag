@@ -10,7 +10,7 @@ uniform vec4 iDate;
 void mainImage( out vec4 f, in vec2 p )
 {
     vec2 d=(p.xy/iResolution.x-.5)*3;
-    f=texture(iChannel0,vec2(atan(d.y,d.x),.3)+.02*iDate.w)/length(5.0*d);
+    f=texture(iChannel0,vec2(atan(d.y,d.x),.3)+.02*iDate.w)/length(7.0*d);
 }
 
 void main() {

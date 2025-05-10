@@ -298,16 +298,6 @@ function getSongPlaylist()
     end
 end
 
-function onCountdownTick(c)
-    local countdownImageNames = {'Ready', 'Set', 'Go'}
-    if c >= 1 and c <= 3 then
-        setProperty('countdown'..countdownImageNames[c]..'.camera', instanceArg('camOther'), false, true)
-        scaleObject('countdown'..countdownImageNames[c], 0.75 + (c/4), 0.8 + (c/5))
-        screenCenter('countdown'..countdownImageNames[c], 'xy')
-        startTween('countdown'..countdownImageNames[c]..'Scale', 'countdown'..countdownImageNames[c]..'.scale', {x = 0.85 + (c/20), y = 0.85 + (c/20)}, 60/bpm, {ease = 'circOut'})
-    end
-end
-
 function goodNoteHit(id, dir, noteType, isSustainNote)
 	if not (isSustainNote or botPlay) then
 		noteRating = getPropertyFromGroup('notes', id, 'rating')

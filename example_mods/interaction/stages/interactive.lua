@@ -1,5 +1,20 @@
 local fakeoutBg = false
 
+local shadersAffectedObjects = {
+    'boyfriend', 'bfReflect',
+    'gf', 'gfReflect',
+    'dad',
+    'interactivePlanet',
+    'interactivePlanetShadow',
+}
+
+local shadersArray = {
+    {name = 'none', hue = 0, saturation = 0, brightness = 0, contrast = 0},
+    {name = 'normal', hue = -15, saturation = -10, brightness = -25, contrast = 0},
+    {name = 'sunset', hue = 5, saturation = 15, brightness = 0, contrast = 5},
+    {name = 'bright', hue = 0, saturation = 100, brightness = 100, contrast = 100},
+}
+
 function onCreate()
     precacheImage('bg/interactivePlanet')
     precacheImage('bg/interactivePlanetShadow')
@@ -15,11 +30,24 @@ function onCreate()
     addLuaSprite('interactiveFront', false)
 end
 
+function shaderFunc(typeUse, range)
+    if range == nil or range == '' then range = {1,#shadersAffectedObjects} end
+    if (shadersEnabled) then
+        for i = range[1],range[2] do
+            setSpriteShader(shadersAffectedObjects[i], 'adjustColor')
+            setShaderFloat(shadersAffectedObjects[i], 'hue', shadersArray[typeUse].hue)
+            setShaderFloat(shadersAffectedObjects[i], 'saturation', shadersArray[typeUse].saturation)
+            setShaderFloat(shadersAffectedObjects[i], 'brightness', shadersArray[typeUse].brightness)
+            setShaderFloat(shadersAffectedObjects[i], 'contrast', shadersArray[typeUse].contrast)
+        end
+    end
+end
+
 function fakeoutBg()
     fakeoutBg = not fakeoutBg
-    removeLuaSprite('interactiveBack', false)
-    removeLuaSprite('interactiveFront', false)
-    doTweenX('dadTween', 'dadGroup', getProperty('dadGroup.x')-150, 0.5, 'circOut')
+    doTweenAlpha('interactiveBackTween', 'interactiveBack', 0, 0.5, 'circOut')
+    doTweenAlpha('interactiveFrontTween', 'interactiveFront', 0, 0.5, 'circOut')
+    doTweenX('dadTween', 'dadGroup', getProperty('dadGroup.x')-100, 0.5, 'circOut')
     doTweenX('bfTween', 'boyfriendGroup', getProperty('boyfriendGroup.x')+100, 0.5, 'circOut')
 
     makeLuaSprite('interactivePlanetShadow', 'bg/interactivePlanetShadow', -6250, 500)
@@ -36,12 +64,33 @@ function fakeoutBg()
     setObjectOrder('interactivePlanet', getObjectOrder('gfReflect')-2)
 
     makeLuaSprite('sunEffect', '', -6000, -2000)
-    makeGraphic('sunEffect', 13000, 13000, 'white')
+    makeGraphic('sunEffect', 3250, 3250, 'white')
+    scaleObject('sunEffect', 4, 4)
     setScrollFactor('sunEffect', 0.02, 0.02)
     setProperty('sunEffect.alpha', 1)
     addLuaSprite('sunEffect', false)
     setSpriteShader('sunEffect', 'sun')
     setObjectOrder('sunEffect', getObjectOrder('gfReflect')-3)
+
+    createInstance('interactiveSpace', 'flixel.addons.display.FlxBackdrop', {nil, 0x11, 0})
+    scaleObject('interactiveSpace', 3,3)
+    loadGraphic('interactiveSpace', 'bg/space')
+    setProperty('interactiveSpace.camera', instanceArg('camGame'), false, true)
+    setProperty('interactiveSpace.velocity.x', 60)
+    setProperty('interactiveSpace.velocity.y', 30)
+    setScrollFactor('interactiveSpace', 0, 0)
+    setObjectOrder('interactiveSpace', getObjectOrder('gfReflect')-4)
+    addInstance('interactiveSpace', false)
+
+    for i = 0, getProperty('playerStrums.length') - 1 do
+        setPropertyFromGroup('playerStrums', i, 'texture', 'noteSkins/NOTE_assets-ftt')
+    end
+
+    for i = 0, getProperty('opponentStrums.length') - 1 do
+        setPropertyFromGroup('opponentStrums', i, 'texture', 'noteSkins/NOTE_assets-ftt')
+    end
+
+    setProperty('noteSplashTexture', 'noteSplashes/noteSplashes-ftt')
 end
 
 function onCreatePost()
@@ -66,6 +115,18 @@ function onCreatePost()
 	setObjectOrder('gfReflect', getObjectOrder('gfGroup')-1)
 	addLuaSprite('gfReflect',false)
 	-- end
+
+    setScrollFactor('gfGroup', 1, 1)
+    initLuaShader('adjustColor')
+    shaderFunc(1)
+
+    for i = 0, getProperty('playerStrums.length') - 1 do
+        setPropertyFromGroup('playerStrums', i, 'texture', 'noteSkins/NOTE_assets')
+    end
+
+    for i = 0, getProperty('opponentStrums.length') - 1 do
+        setPropertyFromGroup('opponentStrums', i, 'texture', 'noteSkins/NOTE_assets')
+    end
 end
 
 function onUpdate()
@@ -115,6 +176,7 @@ function onEvent(n,v1,v2)
     if n == 'Trigger' then
         if v1 == 'fakeoutBg' then
             fakeoutBg()
+            shaderFunc(2)
         elseif v1 == 'shadow' then
             setProperty('interactivePlanetShadow.alpha', 1)
             doTweenAlpha('interactivePlanetShadowTween', 'interactivePlanetShadow', 0, 15, 'sineIn')
@@ -129,7 +191,34 @@ function onEvent(n,v1,v2)
             doTweenColor('bfReflectTween', 'bfReflect', 'ffffff', 15, 'sineIn')
             doTweenColor('gfReflectTween', 'gfReflect', 'ffffff', 15, 'sineIn')
             setObjectOrder('dimBg', getObjectOrder('sunEffect'))
-            doTweenY('sunEffectTween', 'sunEffect', getProperty('sunEffect.y') - 4500, 15, 'sineOut')
+            doTweenY('sunEffectTween', 'sunEffect', getProperty('sunEffect.y') - 5000, 15, 'sineOut')
+            shaderFunc(3)
+        elseif v1 == 'coolColor' then
+            doTweenColor('dimBgTween', 'dimBg', 'ff66bb', 6, 'sineInOut')
+        elseif v1 == 'skyanultra' then
+            for i = 3,#shadersAffectedObjects do
+                setProperty(shadersAffectedObjects[i]..'.visible', false)
+            end
+            removeSpriteShader('sunEffect')
+            if v2 == 'again' then
+                shaderFunc(2,{1,2})
+            else
+                shaderFunc(4,{1,2})
+            end
+        elseif v1 == 'fade1' then
+            cameraFade('game', 'ffffff', 1.1, true, false)
+        elseif v1 == 'skyannopetra' then
+            for i = 3,#shadersAffectedObjects do
+                setProperty(shadersAffectedObjects[i]..'.visible', true)
+            end
+            shaderFunc(3)
+            setSpriteShader('sunEffect', 'sun')
+            cameraFade('game', 'ffffff', 0.1, true, true)
+            setProperty('dimBg.alpha', 1)
+            setProperty('dimBg.color', getColorFromHex('ff66bb'))
+            doTweenColor('dimBgTween', 'dimBg', 'aaffbb', 14, 'sineInOut')
+        elseif v1 == 'fadeBG' then
+            doTweenColor('dimBgTween', 'dimBg', '000000', 0.5, 'sineInOut')
         end
     end
 end
